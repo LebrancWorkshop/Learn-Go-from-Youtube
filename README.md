@@ -6,6 +6,20 @@ Learning Go from many great resources that you can find and learn for free on Yo
 
 ## Resources
 
+- [[EN] Video: Learn Go Programming - Golang Tutorial to Beginners (freeCodeCamp)](https://www.youtube.com/watch?v=YS4e4q9oBaU)
+
+- [[EN] Video: Golang Tutorial for Beginners | Full Go Course (TechWorld with Nana)](https://www.youtube.com/watch?v=yyUHQIec83I)
+
+- [[EN] Playlist: Go Tutorial for Beginner (The Net Ninja)](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gC88BEo9czgyS72A3doDeM)
+
+- [[EN] Playlist: Golang Tutorials (Tech with Tim)](https://www.youtube.com/playlist?list=PLzMcBGfZo4-mtY_SE3HuzQJzuj4VlUG0q)
+
+- [[TH] Video: เริ่มต้นภาษา GOLANG ใน 9 นาที (ฉบับเร่งรัดสุดๆ) (BorntoDev)](https://www.youtube.com/watch?v=2CzmtwDKm5Q)
+
+- [[TH] Playlist: Golang (Ruangyot Nanchiang)](https://www.youtube.com/playlist?list=PLUg0hJGmtzyq2dm5k3LgoOJ7yrQh_eWVt)
+
+- [[TH] Playlist: สอน Golang Part1# (CMDev)](https://www.youtube.com/playlist?list=PLjPfp4Ph3gBrJ6jHPow7pZlOgMmfyQ7zK)
+
 ## How to run
 
 It's very easy for you to run the code on this repository, I've already written a [shell script (main.sh)](https://github.com/LebrancWorkshop/Learn-Go-from-Youtube/blob/main/main.sh) for you to run  
