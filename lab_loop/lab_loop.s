@@ -1,9 +1,9 @@
-main.main STEXT size=96 args=0x0 locals=0x28 funcid=0x0 align=0x0
+main.main STEXT size=112 args=0x0 locals=0x28 funcid=0x0 align=0x0
 	0x0000 00000 (lab_loop.go:11)	TEXT	main.main(SB), ABIInternal, $48-0
 	0x0000 00000 (lab_loop.go:11)	MOVD	16(g), R16
 	0x0004 00004 (lab_loop.go:11)	PCDATA	$0, $-2
 	0x0004 00004 (lab_loop.go:11)	CMP	R16, RSP
-	0x0008 00008 (lab_loop.go:11)	BLS	76
+	0x0008 00008 (lab_loop.go:11)	BLS	92
 	0x000c 00012 (lab_loop.go:11)	PCDATA	$0, $-1
 	0x000c 00012 (lab_loop.go:11)	MOVD.W	R30, -48(RSP)
 	0x0010 00016 (lab_loop.go:11)	MOVD	R29, -8(RSP)
@@ -21,54 +21,60 @@ main.main STEXT size=96 args=0x0 locals=0x28 funcid=0x0 align=0x0
 	0x0034 00052 (lab_loop.go:13)	CALL	main.whileLoop(SB)
 	0x0038 00056 (lab_loop.go:14)	CALL	main.forEachLoop(SB)
 	0x003c 00060 (lab_loop.go:15)	CALL	main.forEachLoopNoIndex(SB)
-	0x0040 00064 (lab_loop.go:16)	LDP	-8(RSP), (R29, R30)
-	0x0044 00068 (lab_loop.go:16)	ADD	$48, RSP
-	0x0048 00072 (lab_loop.go:16)	RET	(R30)
-	0x004c 00076 (lab_loop.go:16)	NOP
-	0x004c 00076 (lab_loop.go:11)	PCDATA	$1, $-1
-	0x004c 00076 (lab_loop.go:11)	PCDATA	$0, $-2
-	0x004c 00076 (lab_loop.go:11)	MOVD	R30, R3
-	0x0050 00080 (lab_loop.go:11)	CALL	runtime.morestack_noctxt(SB)
-	0x0054 00084 (lab_loop.go:11)	PCDATA	$0, $-1
-	0x0054 00084 (lab_loop.go:11)	JMP	0
-	0x0000 90 0b 40 f9 ff 63 30 eb 29 02 00 54 fe 0f 1d f8  ..@..c0.)..T....
+	0x0040 00064 (lab_loop.go:16)	MOVD	$100, R0
+	0x0044 00068 (lab_loop.go:16)	MOVD	$120, R1
+	0x0048 00072 (lab_loop.go:16)	MOVD	$1, R2
+	0x004c 00076 (lab_loop.go:16)	CALL	main.loopWithBreak(SB)
+	0x0050 00080 (lab_loop.go:17)	LDP	-8(RSP), (R29, R30)
+	0x0054 00084 (lab_loop.go:17)	ADD	$48, RSP
+	0x0058 00088 (lab_loop.go:17)	RET	(R30)
+	0x005c 00092 (lab_loop.go:17)	NOP
+	0x005c 00092 (lab_loop.go:11)	PCDATA	$1, $-1
+	0x005c 00092 (lab_loop.go:11)	PCDATA	$0, $-2
+	0x005c 00092 (lab_loop.go:11)	MOVD	R30, R3
+	0x0060 00096 (lab_loop.go:11)	CALL	runtime.morestack_noctxt(SB)
+	0x0064 00100 (lab_loop.go:11)	PCDATA	$0, $-1
+	0x0064 00100 (lab_loop.go:11)	JMP	0
+	0x0000 90 0b 40 f9 ff 63 30 eb a9 02 00 54 fe 0f 1d f8  ..@..c0....T....
 	0x0010 fd 83 1f f8 fd 23 00 d1 e0 03 40 b2 41 01 80 d2  .....#....@.A...
 	0x0020 e2 03 00 aa 00 00 00 94 80 02 80 d2 e1 0f 7f b2  ................
 	0x0030 e2 03 40 b2 00 00 00 94 00 00 00 94 00 00 00 94  ..@.............
-	0x0040 fd fb 7f a9 ff c3 00 91 c0 03 5f d6 e3 03 1e aa  .........._.....
-	0x0050 00 00 00 94 eb ff ff 17 00 00 00 00 00 00 00 00  ................
+	0x0040 80 0c 80 d2 e1 0f 7d b2 e2 03 40 b2 00 00 00 94  ......}...@.....
+	0x0050 fd fb 7f a9 ff c3 00 91 c0 03 5f d6 e3 03 1e aa  .........._.....
+	0x0060 00 00 00 94 e7 ff ff 17 00 00 00 00 00 00 00 00  ................
 	rel 36+4 t=9 main.forLoop+0
 	rel 52+4 t=9 main.whileLoop+0
 	rel 56+4 t=9 main.forEachLoop+0
 	rel 60+4 t=9 main.forEachLoopNoIndex+0
-	rel 80+4 t=9 runtime.morestack_noctxt+0
+	rel 76+4 t=9 main.loopWithBreak+0
+	rel 96+4 t=9 runtime.morestack_noctxt+0
 main.forLoop STEXT size=176 args=0x18 locals=0x48 funcid=0x0 align=0x0
-	0x0000 00000 (lab_loop.go:18)	TEXT	main.forLoop(SB), ABIInternal, $80-24
-	0x0000 00000 (lab_loop.go:18)	MOVD	16(g), R16
-	0x0004 00004 (lab_loop.go:18)	PCDATA	$0, $-2
-	0x0004 00004 (lab_loop.go:18)	CMP	R16, RSP
-	0x0008 00008 (lab_loop.go:18)	BLS	140
-	0x000c 00012 (lab_loop.go:18)	PCDATA	$0, $-1
-	0x000c 00012 (lab_loop.go:18)	MOVD.W	R30, -80(RSP)
-	0x0010 00016 (lab_loop.go:18)	MOVD	R29, -8(RSP)
-	0x0014 00020 (lab_loop.go:18)	SUB	$8, RSP, R29
-	0x0018 00024 (lab_loop.go:18)	FUNCDATA	ZR, gclocals·J5F+7Qw7O7ve2QcWC7DpeQ==(SB)
-	0x0018 00024 (lab_loop.go:18)	FUNCDATA	$1, gclocals·5aa34RaZcmo0NkRpBHp2fg==(SB)
-	0x0018 00024 (lab_loop.go:18)	FUNCDATA	$2, main.forLoop.stkobj(SB)
-	0x0018 00024 (lab_loop.go:18)	FUNCDATA	$5, main.forLoop.arginfo1(SB)
-	0x0018 00024 (lab_loop.go:18)	FUNCDATA	$6, main.forLoop.argliveinfo(SB)
-	0x0018 00024 (lab_loop.go:18)	PCDATA	$3, $1
-	0x0018 00024 (lab_loop.go:18)	MOVD	R1, main.endValue+8(FP)
-	0x001c 00028 (lab_loop.go:18)	MOVD	R2, main.rate+16(FP)
-	0x0020 00032 (lab_loop.go:18)	PCDATA	$3, $2
-	0x0020 00032 (lab_loop.go:19)	JMP	120
-	0x0024 00036 (lab_loop.go:19)	MOVD	R0, main.i-24(SP)
-	0x0028 00040 (lab_loop.go:20)	STP	(ZR, ZR), main..autotmp_12-16(SP)
-	0x002c 00044 (lab_loop.go:20)	PCDATA	$1, $1
-	0x002c 00044 (lab_loop.go:20)	CALL	runtime.convT64(SB)
-	0x0030 00048 (lab_loop.go:20)	MOVD	$type.int(SB), R1
-	0x0038 00056 (lab_loop.go:20)	MOVD	R1, main..autotmp_12-16(SP)
-	0x003c 00060 (lab_loop.go:20)	MOVD	R0, main..autotmp_12-8(SP)
+	0x0000 00000 (lab_loop.go:19)	TEXT	main.forLoop(SB), ABIInternal, $80-24
+	0x0000 00000 (lab_loop.go:19)	MOVD	16(g), R16
+	0x0004 00004 (lab_loop.go:19)	PCDATA	$0, $-2
+	0x0004 00004 (lab_loop.go:19)	CMP	R16, RSP
+	0x0008 00008 (lab_loop.go:19)	BLS	140
+	0x000c 00012 (lab_loop.go:19)	PCDATA	$0, $-1
+	0x000c 00012 (lab_loop.go:19)	MOVD.W	R30, -80(RSP)
+	0x0010 00016 (lab_loop.go:19)	MOVD	R29, -8(RSP)
+	0x0014 00020 (lab_loop.go:19)	SUB	$8, RSP, R29
+	0x0018 00024 (lab_loop.go:19)	FUNCDATA	ZR, gclocals·J5F+7Qw7O7ve2QcWC7DpeQ==(SB)
+	0x0018 00024 (lab_loop.go:19)	FUNCDATA	$1, gclocals·5aa34RaZcmo0NkRpBHp2fg==(SB)
+	0x0018 00024 (lab_loop.go:19)	FUNCDATA	$2, main.forLoop.stkobj(SB)
+	0x0018 00024 (lab_loop.go:19)	FUNCDATA	$5, main.forLoop.arginfo1(SB)
+	0x0018 00024 (lab_loop.go:19)	FUNCDATA	$6, main.forLoop.argliveinfo(SB)
+	0x0018 00024 (lab_loop.go:19)	PCDATA	$3, $1
+	0x0018 00024 (lab_loop.go:19)	MOVD	R1, main.endValue+8(FP)
+	0x001c 00028 (lab_loop.go:19)	MOVD	R2, main.rate+16(FP)
+	0x0020 00032 (lab_loop.go:19)	PCDATA	$3, $2
+	0x0020 00032 (lab_loop.go:20)	JMP	120
+	0x0024 00036 (lab_loop.go:20)	MOVD	R0, main.i-24(SP)
+	0x0028 00040 (lab_loop.go:21)	STP	(ZR, ZR), main..autotmp_12-16(SP)
+	0x002c 00044 (lab_loop.go:21)	PCDATA	$1, $1
+	0x002c 00044 (lab_loop.go:21)	CALL	runtime.convT64(SB)
+	0x0030 00048 (lab_loop.go:21)	MOVD	$type.int(SB), R1
+	0x0038 00056 (lab_loop.go:21)	MOVD	R1, main..autotmp_12-16(SP)
+	0x003c 00060 (lab_loop.go:21)	MOVD	R0, main..autotmp_12-8(SP)
 	0x0040 00064 (<unknown line number>)	NOP
 	0x0040 00064 (<unknown line number>)	PCDATA	$0, $-3
 	0x0040 00064 ($GOROOT/src/fmt/print.go:294)	MOVD	os.Stdout(SB), R2
@@ -80,29 +86,29 @@ main.forLoop STEXT size=176 args=0x18 locals=0x48 funcid=0x0 align=0x0
 	0x0060 00096 ($GOROOT/src/fmt/print.go:294)	MOVD	$main..autotmp_12-16(SP), R2
 	0x0064 00100 ($GOROOT/src/fmt/print.go:294)	PCDATA	$1, ZR
 	0x0064 00100 ($GOROOT/src/fmt/print.go:294)	CALL	fmt.Fprintln(SB)
-	0x0068 00104 (lab_loop.go:19)	MOVD	main.i-24(SP), R1
-	0x006c 00108 (lab_loop.go:19)	MOVD	main.rate+16(FP), R2
-	0x0070 00112 (lab_loop.go:19)	ADD	R2, R1, R0
-	0x0074 00116 (lab_loop.go:19)	MOVD	main.endValue+8(FP), R1
-	0x0078 00120 (lab_loop.go:19)	CMP	R0, R1
-	0x007c 00124 (lab_loop.go:19)	BGE	36
-	0x0080 00128 (lab_loop.go:22)	PCDATA	$1, $-1
-	0x0080 00128 (lab_loop.go:22)	LDP	-8(RSP), (R29, R30)
-	0x0084 00132 (lab_loop.go:22)	ADD	$80, RSP
-	0x0088 00136 (lab_loop.go:22)	RET	(R30)
-	0x008c 00140 (lab_loop.go:22)	NOP
-	0x008c 00140 (lab_loop.go:18)	PCDATA	$1, $-1
-	0x008c 00140 (lab_loop.go:18)	PCDATA	$0, $-2
-	0x008c 00140 (lab_loop.go:18)	MOVD	R0, 8(RSP)
-	0x0090 00144 (lab_loop.go:18)	MOVD	R1, 16(RSP)
-	0x0094 00148 (lab_loop.go:18)	MOVD	R2, 24(RSP)
-	0x0098 00152 (lab_loop.go:18)	MOVD	R30, R3
-	0x009c 00156 (lab_loop.go:18)	CALL	runtime.morestack_noctxt(SB)
-	0x00a0 00160 (lab_loop.go:18)	MOVD	8(RSP), R0
-	0x00a4 00164 (lab_loop.go:18)	MOVD	16(RSP), R1
-	0x00a8 00168 (lab_loop.go:18)	MOVD	24(RSP), R2
-	0x00ac 00172 (lab_loop.go:18)	PCDATA	$0, $-1
-	0x00ac 00172 (lab_loop.go:18)	JMP	0
+	0x0068 00104 (lab_loop.go:20)	MOVD	main.i-24(SP), R1
+	0x006c 00108 (lab_loop.go:20)	MOVD	main.rate+16(FP), R2
+	0x0070 00112 (lab_loop.go:20)	ADD	R2, R1, R0
+	0x0074 00116 (lab_loop.go:20)	MOVD	main.endValue+8(FP), R1
+	0x0078 00120 (lab_loop.go:20)	CMP	R0, R1
+	0x007c 00124 (lab_loop.go:20)	BGE	36
+	0x0080 00128 (lab_loop.go:23)	PCDATA	$1, $-1
+	0x0080 00128 (lab_loop.go:23)	LDP	-8(RSP), (R29, R30)
+	0x0084 00132 (lab_loop.go:23)	ADD	$80, RSP
+	0x0088 00136 (lab_loop.go:23)	RET	(R30)
+	0x008c 00140 (lab_loop.go:23)	NOP
+	0x008c 00140 (lab_loop.go:19)	PCDATA	$1, $-1
+	0x008c 00140 (lab_loop.go:19)	PCDATA	$0, $-2
+	0x008c 00140 (lab_loop.go:19)	MOVD	R0, 8(RSP)
+	0x0090 00144 (lab_loop.go:19)	MOVD	R1, 16(RSP)
+	0x0094 00148 (lab_loop.go:19)	MOVD	R2, 24(RSP)
+	0x0098 00152 (lab_loop.go:19)	MOVD	R30, R3
+	0x009c 00156 (lab_loop.go:19)	CALL	runtime.morestack_noctxt(SB)
+	0x00a0 00160 (lab_loop.go:19)	MOVD	8(RSP), R0
+	0x00a4 00164 (lab_loop.go:19)	MOVD	16(RSP), R1
+	0x00a8 00168 (lab_loop.go:19)	MOVD	24(RSP), R2
+	0x00ac 00172 (lab_loop.go:19)	PCDATA	$0, $-1
+	0x00ac 00172 (lab_loop.go:19)	JMP	0
 	0x0000 90 0b 40 f9 ff 63 30 eb 29 04 00 54 fe 0f 1b f8  ..@..c0.)..T....
 	0x0010 fd 83 1f f8 fd 23 00 d1 e1 33 00 f9 e2 37 00 f9  .....#...3...7..
 	0x0020 16 00 00 14 e0 1b 00 f9 ff ff 03 a9 00 00 00 94  ................
@@ -123,32 +129,32 @@ main.forLoop STEXT size=176 args=0x18 locals=0x48 funcid=0x0 align=0x0
 	rel 100+4 t=9 fmt.Fprintln+0
 	rel 156+4 t=9 runtime.morestack_noctxt+0
 main.whileLoop STEXT size=176 args=0x18 locals=0x48 funcid=0x0 align=0x0
-	0x0000 00000 (lab_loop.go:24)	TEXT	main.whileLoop(SB), ABIInternal, $80-24
-	0x0000 00000 (lab_loop.go:24)	MOVD	16(g), R16
-	0x0004 00004 (lab_loop.go:24)	PCDATA	$0, $-2
-	0x0004 00004 (lab_loop.go:24)	CMP	R16, RSP
-	0x0008 00008 (lab_loop.go:24)	BLS	140
-	0x000c 00012 (lab_loop.go:24)	PCDATA	$0, $-1
-	0x000c 00012 (lab_loop.go:24)	MOVD.W	R30, -80(RSP)
-	0x0010 00016 (lab_loop.go:24)	MOVD	R29, -8(RSP)
-	0x0014 00020 (lab_loop.go:24)	SUB	$8, RSP, R29
-	0x0018 00024 (lab_loop.go:24)	FUNCDATA	ZR, gclocals·J5F+7Qw7O7ve2QcWC7DpeQ==(SB)
-	0x0018 00024 (lab_loop.go:24)	FUNCDATA	$1, gclocals·5aa34RaZcmo0NkRpBHp2fg==(SB)
-	0x0018 00024 (lab_loop.go:24)	FUNCDATA	$2, main.whileLoop.stkobj(SB)
-	0x0018 00024 (lab_loop.go:24)	FUNCDATA	$5, main.whileLoop.arginfo1(SB)
-	0x0018 00024 (lab_loop.go:24)	FUNCDATA	$6, main.whileLoop.argliveinfo(SB)
-	0x0018 00024 (lab_loop.go:24)	PCDATA	$3, $1
-	0x0018 00024 (lab_loop.go:24)	MOVD	R1, main.endValue+8(FP)
-	0x001c 00028 (lab_loop.go:24)	MOVD	R2, main.rate+16(FP)
-	0x0020 00032 (lab_loop.go:24)	PCDATA	$3, $2
-	0x0020 00032 (lab_loop.go:26)	JMP	120
-	0x0024 00036 (lab_loop.go:26)	MOVD	R0, main.i-24(SP)
-	0x0028 00040 (lab_loop.go:27)	STP	(ZR, ZR), main..autotmp_12-16(SP)
-	0x002c 00044 (lab_loop.go:27)	PCDATA	$1, $1
-	0x002c 00044 (lab_loop.go:27)	CALL	runtime.convT64(SB)
-	0x0030 00048 (lab_loop.go:27)	MOVD	$type.int(SB), R1
-	0x0038 00056 (lab_loop.go:27)	MOVD	R1, main..autotmp_12-16(SP)
-	0x003c 00060 (lab_loop.go:27)	MOVD	R0, main..autotmp_12-8(SP)
+	0x0000 00000 (lab_loop.go:25)	TEXT	main.whileLoop(SB), ABIInternal, $80-24
+	0x0000 00000 (lab_loop.go:25)	MOVD	16(g), R16
+	0x0004 00004 (lab_loop.go:25)	PCDATA	$0, $-2
+	0x0004 00004 (lab_loop.go:25)	CMP	R16, RSP
+	0x0008 00008 (lab_loop.go:25)	BLS	140
+	0x000c 00012 (lab_loop.go:25)	PCDATA	$0, $-1
+	0x000c 00012 (lab_loop.go:25)	MOVD.W	R30, -80(RSP)
+	0x0010 00016 (lab_loop.go:25)	MOVD	R29, -8(RSP)
+	0x0014 00020 (lab_loop.go:25)	SUB	$8, RSP, R29
+	0x0018 00024 (lab_loop.go:25)	FUNCDATA	ZR, gclocals·J5F+7Qw7O7ve2QcWC7DpeQ==(SB)
+	0x0018 00024 (lab_loop.go:25)	FUNCDATA	$1, gclocals·5aa34RaZcmo0NkRpBHp2fg==(SB)
+	0x0018 00024 (lab_loop.go:25)	FUNCDATA	$2, main.whileLoop.stkobj(SB)
+	0x0018 00024 (lab_loop.go:25)	FUNCDATA	$5, main.whileLoop.arginfo1(SB)
+	0x0018 00024 (lab_loop.go:25)	FUNCDATA	$6, main.whileLoop.argliveinfo(SB)
+	0x0018 00024 (lab_loop.go:25)	PCDATA	$3, $1
+	0x0018 00024 (lab_loop.go:25)	MOVD	R1, main.endValue+8(FP)
+	0x001c 00028 (lab_loop.go:25)	MOVD	R2, main.rate+16(FP)
+	0x0020 00032 (lab_loop.go:25)	PCDATA	$3, $2
+	0x0020 00032 (lab_loop.go:27)	JMP	120
+	0x0024 00036 (lab_loop.go:27)	MOVD	R0, main.i-24(SP)
+	0x0028 00040 (lab_loop.go:28)	STP	(ZR, ZR), main..autotmp_12-16(SP)
+	0x002c 00044 (lab_loop.go:28)	PCDATA	$1, $1
+	0x002c 00044 (lab_loop.go:28)	CALL	runtime.convT64(SB)
+	0x0030 00048 (lab_loop.go:28)	MOVD	$type.int(SB), R1
+	0x0038 00056 (lab_loop.go:28)	MOVD	R1, main..autotmp_12-16(SP)
+	0x003c 00060 (lab_loop.go:28)	MOVD	R0, main..autotmp_12-8(SP)
 	0x0040 00064 (<unknown line number>)	NOP
 	0x0040 00064 (<unknown line number>)	PCDATA	$0, $-3
 	0x0040 00064 ($GOROOT/src/fmt/print.go:294)	MOVD	os.Stdout(SB), R2
@@ -160,29 +166,29 @@ main.whileLoop STEXT size=176 args=0x18 locals=0x48 funcid=0x0 align=0x0
 	0x0060 00096 ($GOROOT/src/fmt/print.go:294)	MOVD	$main..autotmp_12-16(SP), R2
 	0x0064 00100 ($GOROOT/src/fmt/print.go:294)	PCDATA	$1, ZR
 	0x0064 00100 ($GOROOT/src/fmt/print.go:294)	CALL	fmt.Fprintln(SB)
-	0x0068 00104 (lab_loop.go:28)	MOVD	main.i-24(SP), R1
-	0x006c 00108 (lab_loop.go:28)	MOVD	main.rate+16(FP), R2
-	0x0070 00112 (lab_loop.go:28)	ADD	R2, R1, R0
-	0x0074 00116 (lab_loop.go:26)	MOVD	main.endValue+8(FP), R1
-	0x0078 00120 (lab_loop.go:26)	CMP	R0, R1
-	0x007c 00124 (lab_loop.go:26)	BGE	36
-	0x0080 00128 (lab_loop.go:30)	PCDATA	$1, $-1
-	0x0080 00128 (lab_loop.go:30)	LDP	-8(RSP), (R29, R30)
-	0x0084 00132 (lab_loop.go:30)	ADD	$80, RSP
-	0x0088 00136 (lab_loop.go:30)	RET	(R30)
-	0x008c 00140 (lab_loop.go:30)	NOP
-	0x008c 00140 (lab_loop.go:24)	PCDATA	$1, $-1
-	0x008c 00140 (lab_loop.go:24)	PCDATA	$0, $-2
-	0x008c 00140 (lab_loop.go:24)	MOVD	R0, 8(RSP)
-	0x0090 00144 (lab_loop.go:24)	MOVD	R1, 16(RSP)
-	0x0094 00148 (lab_loop.go:24)	MOVD	R2, 24(RSP)
-	0x0098 00152 (lab_loop.go:24)	MOVD	R30, R3
-	0x009c 00156 (lab_loop.go:24)	CALL	runtime.morestack_noctxt(SB)
-	0x00a0 00160 (lab_loop.go:24)	MOVD	8(RSP), R0
-	0x00a4 00164 (lab_loop.go:24)	MOVD	16(RSP), R1
-	0x00a8 00168 (lab_loop.go:24)	MOVD	24(RSP), R2
-	0x00ac 00172 (lab_loop.go:24)	PCDATA	$0, $-1
-	0x00ac 00172 (lab_loop.go:24)	JMP	0
+	0x0068 00104 (lab_loop.go:29)	MOVD	main.i-24(SP), R1
+	0x006c 00108 (lab_loop.go:29)	MOVD	main.rate+16(FP), R2
+	0x0070 00112 (lab_loop.go:29)	ADD	R2, R1, R0
+	0x0074 00116 (lab_loop.go:27)	MOVD	main.endValue+8(FP), R1
+	0x0078 00120 (lab_loop.go:27)	CMP	R0, R1
+	0x007c 00124 (lab_loop.go:27)	BGE	36
+	0x0080 00128 (lab_loop.go:31)	PCDATA	$1, $-1
+	0x0080 00128 (lab_loop.go:31)	LDP	-8(RSP), (R29, R30)
+	0x0084 00132 (lab_loop.go:31)	ADD	$80, RSP
+	0x0088 00136 (lab_loop.go:31)	RET	(R30)
+	0x008c 00140 (lab_loop.go:31)	NOP
+	0x008c 00140 (lab_loop.go:25)	PCDATA	$1, $-1
+	0x008c 00140 (lab_loop.go:25)	PCDATA	$0, $-2
+	0x008c 00140 (lab_loop.go:25)	MOVD	R0, 8(RSP)
+	0x0090 00144 (lab_loop.go:25)	MOVD	R1, 16(RSP)
+	0x0094 00148 (lab_loop.go:25)	MOVD	R2, 24(RSP)
+	0x0098 00152 (lab_loop.go:25)	MOVD	R30, R3
+	0x009c 00156 (lab_loop.go:25)	CALL	runtime.morestack_noctxt(SB)
+	0x00a0 00160 (lab_loop.go:25)	MOVD	8(RSP), R0
+	0x00a4 00164 (lab_loop.go:25)	MOVD	16(RSP), R1
+	0x00a8 00168 (lab_loop.go:25)	MOVD	24(RSP), R2
+	0x00ac 00172 (lab_loop.go:25)	PCDATA	$0, $-1
+	0x00ac 00172 (lab_loop.go:25)	JMP	0
 	0x0000 90 0b 40 f9 ff 63 30 eb 29 04 00 54 fe 0f 1b f8  ..@..c0.)..T....
 	0x0010 fd 83 1f f8 fd 23 00 d1 e1 33 00 f9 e2 37 00 f9  .....#...3...7..
 	0x0020 16 00 00 14 e0 1b 00 f9 ff ff 03 a9 00 00 00 94  ................
@@ -203,63 +209,63 @@ main.whileLoop STEXT size=176 args=0x18 locals=0x48 funcid=0x0 align=0x0
 	rel 100+4 t=9 fmt.Fprintln+0
 	rel 156+4 t=9 runtime.morestack_noctxt+0
 main.forEachLoop STEXT size=304 args=0x0 locals=0xb8 funcid=0x0 align=0x0
-	0x0000 00000 (lab_loop.go:33)	TEXT	main.forEachLoop(SB), ABIInternal, $192-0
-	0x0000 00000 (lab_loop.go:33)	MOVD	16(g), R16
-	0x0004 00004 (lab_loop.go:33)	PCDATA	$0, $-2
-	0x0004 00004 (lab_loop.go:33)	SUB	$64, RSP, R17
-	0x0008 00008 (lab_loop.go:33)	CMP	R16, R17
-	0x000c 00012 (lab_loop.go:33)	BLS	288
-	0x0010 00016 (lab_loop.go:33)	PCDATA	$0, $-1
-	0x0010 00016 (lab_loop.go:33)	MOVD.W	R30, -192(RSP)
-	0x0014 00020 (lab_loop.go:33)	MOVD	R29, -8(RSP)
-	0x0018 00024 (lab_loop.go:33)	SUB	$8, RSP, R29
-	0x001c 00028 (lab_loop.go:33)	FUNCDATA	ZR, gclocals·D1/YcbyNumM1nqYyoY4wEQ==(SB)
-	0x001c 00028 (lab_loop.go:33)	FUNCDATA	$1, gclocals·3qob1pVdQ+Xbf6Vw/2PqVQ==(SB)
-	0x001c 00028 (lab_loop.go:33)	FUNCDATA	$2, main.forEachLoop.stkobj(SB)
-	0x001c 00028 (lab_loop.go:34)	STP	(ZR, ZR), main..autotmp_12-64(SP)
-	0x0020 00032 (lab_loop.go:34)	STP	(ZR, ZR), main..autotmp_12-48(SP)
-	0x0024 00036 (lab_loop.go:34)	STP	(ZR, ZR), main..autotmp_12-32(SP)
-	0x0028 00040 (lab_loop.go:34)	STP	(ZR, ZR), main..autotmp_12-16(SP)
-	0x002c 00044 (lab_loop.go:34)	MOVD	$go.string."Sword"(SB), R1
-	0x0034 00052 (lab_loop.go:34)	MOVD	R1, main..autotmp_12-64(SP)
-	0x0038 00056 (lab_loop.go:34)	MOVD	$5, R1
-	0x003c 00060 (lab_loop.go:34)	MOVD	R1, main..autotmp_12-56(SP)
-	0x0040 00064 (lab_loop.go:34)	MOVD	$go.string."Axe"(SB), R2
-	0x0048 00072 (lab_loop.go:34)	MOVD	R2, main..autotmp_12-48(SP)
-	0x004c 00076 (lab_loop.go:34)	MOVD	$3, R2
-	0x0050 00080 (lab_loop.go:34)	MOVD	R2, main..autotmp_12-40(SP)
-	0x0054 00084 (lab_loop.go:34)	MOVD	$go.string."Bow"(SB), R3
-	0x005c 00092 (lab_loop.go:34)	MOVD	R3, main..autotmp_12-32(SP)
-	0x0060 00096 (lab_loop.go:34)	MOVD	R2, main..autotmp_12-24(SP)
-	0x0064 00100 (lab_loop.go:34)	MOVD	$go.string."Spear"(SB), R2
-	0x006c 00108 (lab_loop.go:34)	MOVD	R2, main..autotmp_12-16(SP)
-	0x0070 00112 (lab_loop.go:34)	MOVD	R1, main..autotmp_12-8(SP)
-	0x0074 00116 (lab_loop.go:34)	MOVD	$main..autotmp_12-64(SP), R0
-	0x0078 00120 (lab_loop.go:34)	MOVD	ZR, R1
-	0x007c 00124 (lab_loop.go:35)	JMP	136
-	0x0080 00128 (lab_loop.go:35)	MOVD	main..autotmp_28-104(SP), R2
-	0x0084 00132 (lab_loop.go:35)	ADD	$16, R2, R0
-	0x0088 00136 (lab_loop.go:35)	MOVD	R1, main.index-120(SP)
-	0x008c 00140 (lab_loop.go:35)	MOVD	R0, main..autotmp_28-104(SP)
-	0x0090 00144 (lab_loop.go:35)	MOVD	(R0), R2
-	0x0094 00148 (lab_loop.go:35)	MOVD	R2, main.weapon.ptr-112(SP)
-	0x0098 00152 (lab_loop.go:35)	MOVD	8(R0), R3
-	0x009c 00156 (lab_loop.go:35)	MOVD	R3, main.weapon.len-128(SP)
-	0x00a0 00160 (lab_loop.go:36)	STP	(ZR, ZR), main..autotmp_17-96(SP)
-	0x00a4 00164 (lab_loop.go:36)	STP	(ZR, ZR), main..autotmp_17-80(SP)
-	0x00a8 00168 (lab_loop.go:36)	MOVD	R1, R0
-	0x00ac 00172 (lab_loop.go:36)	PCDATA	$1, $1
-	0x00ac 00172 (lab_loop.go:36)	CALL	runtime.convT64(SB)
-	0x00b0 00176 (lab_loop.go:36)	MOVD	$type.int(SB), R1
-	0x00b8 00184 (lab_loop.go:36)	MOVD	R1, main..autotmp_17-96(SP)
-	0x00bc 00188 (lab_loop.go:36)	MOVD	R0, main..autotmp_17-88(SP)
-	0x00c0 00192 (lab_loop.go:36)	MOVD	main.weapon.ptr-112(SP), R0
-	0x00c4 00196 (lab_loop.go:36)	MOVD	main.weapon.len-128(SP), R1
-	0x00c8 00200 (lab_loop.go:36)	PCDATA	$1, $2
-	0x00c8 00200 (lab_loop.go:36)	CALL	runtime.convTstring(SB)
-	0x00cc 00204 (lab_loop.go:36)	MOVD	$type.string(SB), R1
-	0x00d4 00212 (lab_loop.go:36)	MOVD	R1, main..autotmp_17-80(SP)
-	0x00d8 00216 (lab_loop.go:36)	MOVD	R0, main..autotmp_17-72(SP)
+	0x0000 00000 (lab_loop.go:34)	TEXT	main.forEachLoop(SB), ABIInternal, $192-0
+	0x0000 00000 (lab_loop.go:34)	MOVD	16(g), R16
+	0x0004 00004 (lab_loop.go:34)	PCDATA	$0, $-2
+	0x0004 00004 (lab_loop.go:34)	SUB	$64, RSP, R17
+	0x0008 00008 (lab_loop.go:34)	CMP	R16, R17
+	0x000c 00012 (lab_loop.go:34)	BLS	288
+	0x0010 00016 (lab_loop.go:34)	PCDATA	$0, $-1
+	0x0010 00016 (lab_loop.go:34)	MOVD.W	R30, -192(RSP)
+	0x0014 00020 (lab_loop.go:34)	MOVD	R29, -8(RSP)
+	0x0018 00024 (lab_loop.go:34)	SUB	$8, RSP, R29
+	0x001c 00028 (lab_loop.go:34)	FUNCDATA	ZR, gclocals·D1/YcbyNumM1nqYyoY4wEQ==(SB)
+	0x001c 00028 (lab_loop.go:34)	FUNCDATA	$1, gclocals·3qob1pVdQ+Xbf6Vw/2PqVQ==(SB)
+	0x001c 00028 (lab_loop.go:34)	FUNCDATA	$2, main.forEachLoop.stkobj(SB)
+	0x001c 00028 (lab_loop.go:35)	STP	(ZR, ZR), main..autotmp_12-64(SP)
+	0x0020 00032 (lab_loop.go:35)	STP	(ZR, ZR), main..autotmp_12-48(SP)
+	0x0024 00036 (lab_loop.go:35)	STP	(ZR, ZR), main..autotmp_12-32(SP)
+	0x0028 00040 (lab_loop.go:35)	STP	(ZR, ZR), main..autotmp_12-16(SP)
+	0x002c 00044 (lab_loop.go:35)	MOVD	$go.string."Sword"(SB), R1
+	0x0034 00052 (lab_loop.go:35)	MOVD	R1, main..autotmp_12-64(SP)
+	0x0038 00056 (lab_loop.go:35)	MOVD	$5, R1
+	0x003c 00060 (lab_loop.go:35)	MOVD	R1, main..autotmp_12-56(SP)
+	0x0040 00064 (lab_loop.go:35)	MOVD	$go.string."Axe"(SB), R2
+	0x0048 00072 (lab_loop.go:35)	MOVD	R2, main..autotmp_12-48(SP)
+	0x004c 00076 (lab_loop.go:35)	MOVD	$3, R2
+	0x0050 00080 (lab_loop.go:35)	MOVD	R2, main..autotmp_12-40(SP)
+	0x0054 00084 (lab_loop.go:35)	MOVD	$go.string."Bow"(SB), R3
+	0x005c 00092 (lab_loop.go:35)	MOVD	R3, main..autotmp_12-32(SP)
+	0x0060 00096 (lab_loop.go:35)	MOVD	R2, main..autotmp_12-24(SP)
+	0x0064 00100 (lab_loop.go:35)	MOVD	$go.string."Spear"(SB), R2
+	0x006c 00108 (lab_loop.go:35)	MOVD	R2, main..autotmp_12-16(SP)
+	0x0070 00112 (lab_loop.go:35)	MOVD	R1, main..autotmp_12-8(SP)
+	0x0074 00116 (lab_loop.go:35)	MOVD	$main..autotmp_12-64(SP), R0
+	0x0078 00120 (lab_loop.go:35)	MOVD	ZR, R1
+	0x007c 00124 (lab_loop.go:36)	JMP	136
+	0x0080 00128 (lab_loop.go:36)	MOVD	main..autotmp_28-104(SP), R2
+	0x0084 00132 (lab_loop.go:36)	ADD	$16, R2, R0
+	0x0088 00136 (lab_loop.go:36)	MOVD	R1, main.index-120(SP)
+	0x008c 00140 (lab_loop.go:36)	MOVD	R0, main..autotmp_28-104(SP)
+	0x0090 00144 (lab_loop.go:36)	MOVD	(R0), R2
+	0x0094 00148 (lab_loop.go:36)	MOVD	R2, main.weapon.ptr-112(SP)
+	0x0098 00152 (lab_loop.go:36)	MOVD	8(R0), R3
+	0x009c 00156 (lab_loop.go:36)	MOVD	R3, main.weapon.len-128(SP)
+	0x00a0 00160 (lab_loop.go:37)	STP	(ZR, ZR), main..autotmp_17-96(SP)
+	0x00a4 00164 (lab_loop.go:37)	STP	(ZR, ZR), main..autotmp_17-80(SP)
+	0x00a8 00168 (lab_loop.go:37)	MOVD	R1, R0
+	0x00ac 00172 (lab_loop.go:37)	PCDATA	$1, $1
+	0x00ac 00172 (lab_loop.go:37)	CALL	runtime.convT64(SB)
+	0x00b0 00176 (lab_loop.go:37)	MOVD	$type.int(SB), R1
+	0x00b8 00184 (lab_loop.go:37)	MOVD	R1, main..autotmp_17-96(SP)
+	0x00bc 00188 (lab_loop.go:37)	MOVD	R0, main..autotmp_17-88(SP)
+	0x00c0 00192 (lab_loop.go:37)	MOVD	main.weapon.ptr-112(SP), R0
+	0x00c4 00196 (lab_loop.go:37)	MOVD	main.weapon.len-128(SP), R1
+	0x00c8 00200 (lab_loop.go:37)	PCDATA	$1, $2
+	0x00c8 00200 (lab_loop.go:37)	CALL	runtime.convTstring(SB)
+	0x00cc 00204 (lab_loop.go:37)	MOVD	$type.string(SB), R1
+	0x00d4 00212 (lab_loop.go:37)	MOVD	R1, main..autotmp_17-80(SP)
+	0x00d8 00216 (lab_loop.go:37)	MOVD	R0, main..autotmp_17-72(SP)
 	0x00dc 00220 (<unknown line number>)	NOP
 	0x00dc 00220 (<unknown line number>)	PCDATA	$0, $-3
 	0x00dc 00220 ($GOROOT/src/fmt/print.go:294)	MOVD	os.Stdout(SB), R2
@@ -271,21 +277,21 @@ main.forEachLoop STEXT size=304 args=0x0 locals=0xb8 funcid=0x0 align=0x0
 	0x00fc 00252 ($GOROOT/src/fmt/print.go:294)	MOVD	$main..autotmp_17-96(SP), R2
 	0x0100 00256 ($GOROOT/src/fmt/print.go:294)	PCDATA	$1, $3
 	0x0100 00256 ($GOROOT/src/fmt/print.go:294)	CALL	fmt.Fprintln(SB)
-	0x0104 00260 (lab_loop.go:35)	MOVD	main.index-120(SP), R1
-	0x0108 00264 (lab_loop.go:35)	ADD	$1, R1, R1
-	0x010c 00268 (lab_loop.go:35)	CMP	$4, R1
-	0x0110 00272 (lab_loop.go:35)	BLT	128
-	0x0114 00276 (lab_loop.go:38)	PCDATA	$1, $-1
-	0x0114 00276 (lab_loop.go:38)	LDP	-8(RSP), (R29, R30)
-	0x0118 00280 (lab_loop.go:38)	ADD	$192, RSP
-	0x011c 00284 (lab_loop.go:38)	RET	(R30)
-	0x0120 00288 (lab_loop.go:38)	NOP
-	0x0120 00288 (lab_loop.go:33)	PCDATA	$1, $-1
-	0x0120 00288 (lab_loop.go:33)	PCDATA	$0, $-2
-	0x0120 00288 (lab_loop.go:33)	MOVD	R30, R3
-	0x0124 00292 (lab_loop.go:33)	CALL	runtime.morestack_noctxt(SB)
-	0x0128 00296 (lab_loop.go:33)	PCDATA	$0, $-1
-	0x0128 00296 (lab_loop.go:33)	JMP	0
+	0x0104 00260 (lab_loop.go:36)	MOVD	main.index-120(SP), R1
+	0x0108 00264 (lab_loop.go:36)	ADD	$1, R1, R1
+	0x010c 00268 (lab_loop.go:36)	CMP	$4, R1
+	0x0110 00272 (lab_loop.go:36)	BLT	128
+	0x0114 00276 (lab_loop.go:39)	PCDATA	$1, $-1
+	0x0114 00276 (lab_loop.go:39)	LDP	-8(RSP), (R29, R30)
+	0x0118 00280 (lab_loop.go:39)	ADD	$192, RSP
+	0x011c 00284 (lab_loop.go:39)	RET	(R30)
+	0x0120 00288 (lab_loop.go:39)	NOP
+	0x0120 00288 (lab_loop.go:34)	PCDATA	$1, $-1
+	0x0120 00288 (lab_loop.go:34)	PCDATA	$0, $-2
+	0x0120 00288 (lab_loop.go:34)	MOVD	R30, R3
+	0x0124 00292 (lab_loop.go:34)	CALL	runtime.morestack_noctxt(SB)
+	0x0128 00296 (lab_loop.go:34)	PCDATA	$0, $-1
+	0x0128 00296 (lab_loop.go:34)	JMP	0
 	0x0000 90 0b 40 f9 f1 03 01 d1 3f 02 10 eb a9 08 00 54  ..@.....?......T
 	0x0010 fe 0f 14 f8 fd 83 1f f8 fd 23 00 d1 ff ff 07 a9  .........#......
 	0x0020 ff ff 08 a9 ff ff 09 a9 ff ff 0a a9 01 00 00 90  ................
@@ -321,55 +327,55 @@ main.forEachLoop STEXT size=304 args=0x0 locals=0xb8 funcid=0x0 align=0x0
 	rel 256+4 t=9 fmt.Fprintln+0
 	rel 292+4 t=9 runtime.morestack_noctxt+0
 main.forEachLoopNoIndex STEXT size=272 args=0x0 locals=0x98 funcid=0x0 align=0x0
-	0x0000 00000 (lab_loop.go:40)	TEXT	main.forEachLoopNoIndex(SB), ABIInternal, $160-0
-	0x0000 00000 (lab_loop.go:40)	MOVD	16(g), R16
-	0x0004 00004 (lab_loop.go:40)	PCDATA	$0, $-2
-	0x0004 00004 (lab_loop.go:40)	SUB	$32, RSP, R17
-	0x0008 00008 (lab_loop.go:40)	CMP	R16, R17
-	0x000c 00012 (lab_loop.go:40)	BLS	252
-	0x0010 00016 (lab_loop.go:40)	PCDATA	$0, $-1
-	0x0010 00016 (lab_loop.go:40)	MOVD.W	R30, -160(RSP)
-	0x0014 00020 (lab_loop.go:40)	MOVD	R29, -8(RSP)
-	0x0018 00024 (lab_loop.go:40)	SUB	$8, RSP, R29
-	0x001c 00028 (lab_loop.go:40)	FUNCDATA	ZR, gclocals·ykHN0vawYuq1dUW4zEe2gA==(SB)
-	0x001c 00028 (lab_loop.go:40)	FUNCDATA	$1, gclocals·Z22dp3C5cwsGGFCNyLLlwA==(SB)
-	0x001c 00028 (lab_loop.go:40)	FUNCDATA	$2, main.forEachLoopNoIndex.stkobj(SB)
-	0x001c 00028 (lab_loop.go:41)	STP	(ZR, ZR), main..autotmp_11-64(SP)
-	0x0020 00032 (lab_loop.go:41)	STP	(ZR, ZR), main..autotmp_11-48(SP)
-	0x0024 00036 (lab_loop.go:41)	STP	(ZR, ZR), main..autotmp_11-32(SP)
-	0x0028 00040 (lab_loop.go:41)	STP	(ZR, ZR), main..autotmp_11-16(SP)
-	0x002c 00044 (lab_loop.go:41)	MOVD	$go.string."Sword"(SB), R2
-	0x0034 00052 (lab_loop.go:41)	MOVD	R2, main..autotmp_11-64(SP)
-	0x0038 00056 (lab_loop.go:41)	MOVD	$5, R2
-	0x003c 00060 (lab_loop.go:41)	MOVD	R2, main..autotmp_11-56(SP)
-	0x0040 00064 (lab_loop.go:41)	MOVD	$go.string."Axe"(SB), R3
-	0x0048 00072 (lab_loop.go:41)	MOVD	R3, main..autotmp_11-48(SP)
-	0x004c 00076 (lab_loop.go:41)	MOVD	$3, R3
-	0x0050 00080 (lab_loop.go:41)	MOVD	R3, main..autotmp_11-40(SP)
-	0x0054 00084 (lab_loop.go:41)	MOVD	$go.string."Bow"(SB), R4
-	0x005c 00092 (lab_loop.go:41)	MOVD	R4, main..autotmp_11-32(SP)
-	0x0060 00096 (lab_loop.go:41)	MOVD	R3, main..autotmp_11-24(SP)
-	0x0064 00100 (lab_loop.go:41)	MOVD	$go.string."Spear"(SB), R3
-	0x006c 00108 (lab_loop.go:41)	MOVD	R3, main..autotmp_11-16(SP)
-	0x0070 00112 (lab_loop.go:41)	MOVD	R2, main..autotmp_11-8(SP)
-	0x0074 00116 (lab_loop.go:41)	MOVD	$main..autotmp_11-64(SP), R0
-	0x0078 00120 (lab_loop.go:41)	MOVD	ZR, R1
-	0x007c 00124 (lab_loop.go:42)	JMP	140
-	0x0080 00128 (lab_loop.go:42)	MOVD	main..autotmp_27-88(SP), R3
-	0x0084 00132 (lab_loop.go:42)	ADD	$16, R3, R0
-	0x0088 00136 (lab_loop.go:42)	MOVD	R2, R1
-	0x008c 00140 (lab_loop.go:42)	MOVD	R1, main..autotmp_26-96(SP)
-	0x0090 00144 (lab_loop.go:42)	MOVD	R0, main..autotmp_27-88(SP)
-	0x0094 00148 (lab_loop.go:42)	MOVD	(R0), R2
-	0x0098 00152 (lab_loop.go:42)	MOVD	8(R0), R3
-	0x009c 00156 (lab_loop.go:43)	STP	(ZR, ZR), main..autotmp_16-80(SP)
-	0x00a0 00160 (lab_loop.go:43)	MOVD	R2, R0
-	0x00a4 00164 (lab_loop.go:43)	MOVD	R3, R1
-	0x00a8 00168 (lab_loop.go:43)	PCDATA	$1, $1
-	0x00a8 00168 (lab_loop.go:43)	CALL	runtime.convTstring(SB)
-	0x00ac 00172 (lab_loop.go:43)	MOVD	$type.string(SB), R2
-	0x00b4 00180 (lab_loop.go:43)	MOVD	R2, main..autotmp_16-80(SP)
-	0x00b8 00184 (lab_loop.go:43)	MOVD	R0, main..autotmp_16-72(SP)
+	0x0000 00000 (lab_loop.go:41)	TEXT	main.forEachLoopNoIndex(SB), ABIInternal, $160-0
+	0x0000 00000 (lab_loop.go:41)	MOVD	16(g), R16
+	0x0004 00004 (lab_loop.go:41)	PCDATA	$0, $-2
+	0x0004 00004 (lab_loop.go:41)	SUB	$32, RSP, R17
+	0x0008 00008 (lab_loop.go:41)	CMP	R16, R17
+	0x000c 00012 (lab_loop.go:41)	BLS	252
+	0x0010 00016 (lab_loop.go:41)	PCDATA	$0, $-1
+	0x0010 00016 (lab_loop.go:41)	MOVD.W	R30, -160(RSP)
+	0x0014 00020 (lab_loop.go:41)	MOVD	R29, -8(RSP)
+	0x0018 00024 (lab_loop.go:41)	SUB	$8, RSP, R29
+	0x001c 00028 (lab_loop.go:41)	FUNCDATA	ZR, gclocals·ykHN0vawYuq1dUW4zEe2gA==(SB)
+	0x001c 00028 (lab_loop.go:41)	FUNCDATA	$1, gclocals·Z22dp3C5cwsGGFCNyLLlwA==(SB)
+	0x001c 00028 (lab_loop.go:41)	FUNCDATA	$2, main.forEachLoopNoIndex.stkobj(SB)
+	0x001c 00028 (lab_loop.go:42)	STP	(ZR, ZR), main..autotmp_11-64(SP)
+	0x0020 00032 (lab_loop.go:42)	STP	(ZR, ZR), main..autotmp_11-48(SP)
+	0x0024 00036 (lab_loop.go:42)	STP	(ZR, ZR), main..autotmp_11-32(SP)
+	0x0028 00040 (lab_loop.go:42)	STP	(ZR, ZR), main..autotmp_11-16(SP)
+	0x002c 00044 (lab_loop.go:42)	MOVD	$go.string."Sword"(SB), R2
+	0x0034 00052 (lab_loop.go:42)	MOVD	R2, main..autotmp_11-64(SP)
+	0x0038 00056 (lab_loop.go:42)	MOVD	$5, R2
+	0x003c 00060 (lab_loop.go:42)	MOVD	R2, main..autotmp_11-56(SP)
+	0x0040 00064 (lab_loop.go:42)	MOVD	$go.string."Axe"(SB), R3
+	0x0048 00072 (lab_loop.go:42)	MOVD	R3, main..autotmp_11-48(SP)
+	0x004c 00076 (lab_loop.go:42)	MOVD	$3, R3
+	0x0050 00080 (lab_loop.go:42)	MOVD	R3, main..autotmp_11-40(SP)
+	0x0054 00084 (lab_loop.go:42)	MOVD	$go.string."Bow"(SB), R4
+	0x005c 00092 (lab_loop.go:42)	MOVD	R4, main..autotmp_11-32(SP)
+	0x0060 00096 (lab_loop.go:42)	MOVD	R3, main..autotmp_11-24(SP)
+	0x0064 00100 (lab_loop.go:42)	MOVD	$go.string."Spear"(SB), R3
+	0x006c 00108 (lab_loop.go:42)	MOVD	R3, main..autotmp_11-16(SP)
+	0x0070 00112 (lab_loop.go:42)	MOVD	R2, main..autotmp_11-8(SP)
+	0x0074 00116 (lab_loop.go:42)	MOVD	$main..autotmp_11-64(SP), R0
+	0x0078 00120 (lab_loop.go:42)	MOVD	ZR, R1
+	0x007c 00124 (lab_loop.go:43)	JMP	140
+	0x0080 00128 (lab_loop.go:43)	MOVD	main..autotmp_27-88(SP), R3
+	0x0084 00132 (lab_loop.go:43)	ADD	$16, R3, R0
+	0x0088 00136 (lab_loop.go:43)	MOVD	R2, R1
+	0x008c 00140 (lab_loop.go:43)	MOVD	R1, main..autotmp_26-96(SP)
+	0x0090 00144 (lab_loop.go:43)	MOVD	R0, main..autotmp_27-88(SP)
+	0x0094 00148 (lab_loop.go:43)	MOVD	(R0), R2
+	0x0098 00152 (lab_loop.go:43)	MOVD	8(R0), R3
+	0x009c 00156 (lab_loop.go:44)	STP	(ZR, ZR), main..autotmp_16-80(SP)
+	0x00a0 00160 (lab_loop.go:44)	MOVD	R2, R0
+	0x00a4 00164 (lab_loop.go:44)	MOVD	R3, R1
+	0x00a8 00168 (lab_loop.go:44)	PCDATA	$1, $1
+	0x00a8 00168 (lab_loop.go:44)	CALL	runtime.convTstring(SB)
+	0x00ac 00172 (lab_loop.go:44)	MOVD	$type.string(SB), R2
+	0x00b4 00180 (lab_loop.go:44)	MOVD	R2, main..autotmp_16-80(SP)
+	0x00b8 00184 (lab_loop.go:44)	MOVD	R0, main..autotmp_16-72(SP)
 	0x00bc 00188 (<unknown line number>)	NOP
 	0x00bc 00188 (<unknown line number>)	PCDATA	$0, $-3
 	0x00bc 00188 ($GOROOT/src/fmt/print.go:294)	MOVD	os.Stdout(SB), R1
@@ -380,21 +386,21 @@ main.forEachLoopNoIndex STEXT size=272 args=0x0 locals=0x98 funcid=0x0 align=0x0
 	0x00d8 00216 ($GOROOT/src/fmt/print.go:294)	MOVD	$main..autotmp_16-80(SP), R2
 	0x00dc 00220 ($GOROOT/src/fmt/print.go:294)	PCDATA	$1, $2
 	0x00dc 00220 ($GOROOT/src/fmt/print.go:294)	CALL	fmt.Fprintln(SB)
-	0x00e0 00224 (lab_loop.go:42)	MOVD	main..autotmp_26-96(SP), R2
-	0x00e4 00228 (lab_loop.go:42)	ADD	$1, R2, R2
-	0x00e8 00232 (lab_loop.go:42)	CMP	$4, R2
-	0x00ec 00236 (lab_loop.go:42)	BLT	128
-	0x00f0 00240 (lab_loop.go:45)	PCDATA	$1, $-1
-	0x00f0 00240 (lab_loop.go:45)	LDP	-8(RSP), (R29, R30)
-	0x00f4 00244 (lab_loop.go:45)	ADD	$160, RSP
-	0x00f8 00248 (lab_loop.go:45)	RET	(R30)
-	0x00fc 00252 (lab_loop.go:45)	NOP
-	0x00fc 00252 (lab_loop.go:40)	PCDATA	$1, $-1
-	0x00fc 00252 (lab_loop.go:40)	PCDATA	$0, $-2
-	0x00fc 00252 (lab_loop.go:40)	MOVD	R30, R3
-	0x0100 00256 (lab_loop.go:40)	CALL	runtime.morestack_noctxt(SB)
-	0x0104 00260 (lab_loop.go:40)	PCDATA	$0, $-1
-	0x0104 00260 (lab_loop.go:40)	JMP	0
+	0x00e0 00224 (lab_loop.go:43)	MOVD	main..autotmp_26-96(SP), R2
+	0x00e4 00228 (lab_loop.go:43)	ADD	$1, R2, R2
+	0x00e8 00232 (lab_loop.go:43)	CMP	$4, R2
+	0x00ec 00236 (lab_loop.go:43)	BLT	128
+	0x00f0 00240 (lab_loop.go:46)	PCDATA	$1, $-1
+	0x00f0 00240 (lab_loop.go:46)	LDP	-8(RSP), (R29, R30)
+	0x00f4 00244 (lab_loop.go:46)	ADD	$160, RSP
+	0x00f8 00248 (lab_loop.go:46)	RET	(R30)
+	0x00fc 00252 (lab_loop.go:46)	NOP
+	0x00fc 00252 (lab_loop.go:41)	PCDATA	$1, $-1
+	0x00fc 00252 (lab_loop.go:41)	PCDATA	$0, $-2
+	0x00fc 00252 (lab_loop.go:41)	MOVD	R30, R3
+	0x0100 00256 (lab_loop.go:41)	CALL	runtime.morestack_noctxt(SB)
+	0x0104 00260 (lab_loop.go:41)	PCDATA	$0, $-1
+	0x0104 00260 (lab_loop.go:41)	JMP	0
 	0x0000 90 0b 40 f9 f1 83 00 d1 3f 02 10 eb 89 07 00 54  ..@.....?......T
 	0x0010 fe 0f 16 f8 fd 83 1f f8 fd 23 00 d1 ff ff 05 a9  .........#......
 	0x0020 ff ff 06 a9 ff ff 07 a9 ff ff 08 a9 02 00 00 90  ................
@@ -424,6 +430,86 @@ main.forEachLoopNoIndex STEXT size=272 args=0x0 locals=0x98 funcid=0x0 align=0x0
 	rel 200+8 t=3 go.itab.*os.File,io.Writer+0
 	rel 220+4 t=9 fmt.Fprintln+0
 	rel 256+4 t=9 runtime.morestack_noctxt+0
+main.loopWithBreak STEXT size=176 args=0x18 locals=0x48 funcid=0x0 align=0x0
+	0x0000 00000 (lab_loop.go:48)	TEXT	main.loopWithBreak(SB), ABIInternal, $80-24
+	0x0000 00000 (lab_loop.go:48)	MOVD	16(g), R16
+	0x0004 00004 (lab_loop.go:48)	PCDATA	$0, $-2
+	0x0004 00004 (lab_loop.go:48)	CMP	R16, RSP
+	0x0008 00008 (lab_loop.go:48)	BLS	140
+	0x000c 00012 (lab_loop.go:48)	PCDATA	$0, $-1
+	0x000c 00012 (lab_loop.go:48)	MOVD.W	R30, -80(RSP)
+	0x0010 00016 (lab_loop.go:48)	MOVD	R29, -8(RSP)
+	0x0014 00020 (lab_loop.go:48)	SUB	$8, RSP, R29
+	0x0018 00024 (lab_loop.go:48)	FUNCDATA	ZR, gclocals·J5F+7Qw7O7ve2QcWC7DpeQ==(SB)
+	0x0018 00024 (lab_loop.go:48)	FUNCDATA	$1, gclocals·5aa34RaZcmo0NkRpBHp2fg==(SB)
+	0x0018 00024 (lab_loop.go:48)	FUNCDATA	$2, main.loopWithBreak.stkobj(SB)
+	0x0018 00024 (lab_loop.go:48)	FUNCDATA	$5, main.loopWithBreak.arginfo1(SB)
+	0x0018 00024 (lab_loop.go:48)	FUNCDATA	$6, main.loopWithBreak.argliveinfo(SB)
+	0x0018 00024 (lab_loop.go:48)	PCDATA	$3, $1
+	0x0018 00024 (lab_loop.go:48)	MOVD	R1, main.endValue+8(FP)
+	0x001c 00028 (lab_loop.go:48)	MOVD	R2, main.rate+16(FP)
+	0x0020 00032 (lab_loop.go:48)	PCDATA	$3, $2
+	0x0020 00032 (lab_loop.go:50)	JMP	120
+	0x0024 00036 (lab_loop.go:51)	MOVD	R0, main.i-24(SP)
+	0x0028 00040 (lab_loop.go:54)	STP	(ZR, ZR), main..autotmp_12-16(SP)
+	0x002c 00044 (lab_loop.go:54)	PCDATA	$1, $1
+	0x002c 00044 (lab_loop.go:54)	CALL	runtime.convT64(SB)
+	0x0030 00048 (lab_loop.go:54)	MOVD	$type.int(SB), R1
+	0x0038 00056 (lab_loop.go:54)	MOVD	R1, main..autotmp_12-16(SP)
+	0x003c 00060 (lab_loop.go:54)	MOVD	R0, main..autotmp_12-8(SP)
+	0x0040 00064 (<unknown line number>)	NOP
+	0x0040 00064 (<unknown line number>)	PCDATA	$0, $-3
+	0x0040 00064 ($GOROOT/src/fmt/print.go:294)	MOVD	os.Stdout(SB), R2
+	0x004c 00076 ($GOROOT/src/fmt/print.go:294)	PCDATA	$0, $-1
+	0x004c 00076 ($GOROOT/src/fmt/print.go:294)	MOVD	$go.itab.*os.File,io.Writer(SB), R0
+	0x0054 00084 ($GOROOT/src/fmt/print.go:294)	MOVD	$1, R3
+	0x0058 00088 ($GOROOT/src/fmt/print.go:294)	MOVD	R3, R4
+	0x005c 00092 ($GOROOT/src/fmt/print.go:294)	MOVD	R2, R1
+	0x0060 00096 ($GOROOT/src/fmt/print.go:294)	MOVD	$main..autotmp_12-16(SP), R2
+	0x0064 00100 ($GOROOT/src/fmt/print.go:294)	PCDATA	$1, ZR
+	0x0064 00100 ($GOROOT/src/fmt/print.go:294)	CALL	fmt.Fprintln(SB)
+	0x0068 00104 (lab_loop.go:55)	MOVD	main.i-24(SP), R1
+	0x006c 00108 (lab_loop.go:55)	MOVD	main.rate+16(FP), R2
+	0x0070 00112 (lab_loop.go:55)	ADD	R2, R1, R0
+	0x0074 00116 (lab_loop.go:51)	MOVD	main.endValue+8(FP), R1
+	0x0078 00120 (lab_loop.go:51)	CMP	R0, R1
+	0x007c 00124 (lab_loop.go:51)	BGE	36
+	0x0080 00128 (lab_loop.go:57)	PCDATA	$1, $-1
+	0x0080 00128 (lab_loop.go:57)	LDP	-8(RSP), (R29, R30)
+	0x0084 00132 (lab_loop.go:57)	ADD	$80, RSP
+	0x0088 00136 (lab_loop.go:57)	RET	(R30)
+	0x008c 00140 (lab_loop.go:57)	NOP
+	0x008c 00140 (lab_loop.go:48)	PCDATA	$1, $-1
+	0x008c 00140 (lab_loop.go:48)	PCDATA	$0, $-2
+	0x008c 00140 (lab_loop.go:48)	MOVD	R0, 8(RSP)
+	0x0090 00144 (lab_loop.go:48)	MOVD	R1, 16(RSP)
+	0x0094 00148 (lab_loop.go:48)	MOVD	R2, 24(RSP)
+	0x0098 00152 (lab_loop.go:48)	MOVD	R30, R3
+	0x009c 00156 (lab_loop.go:48)	CALL	runtime.morestack_noctxt(SB)
+	0x00a0 00160 (lab_loop.go:48)	MOVD	8(RSP), R0
+	0x00a4 00164 (lab_loop.go:48)	MOVD	16(RSP), R1
+	0x00a8 00168 (lab_loop.go:48)	MOVD	24(RSP), R2
+	0x00ac 00172 (lab_loop.go:48)	PCDATA	$0, $-1
+	0x00ac 00172 (lab_loop.go:48)	JMP	0
+	0x0000 90 0b 40 f9 ff 63 30 eb 29 04 00 54 fe 0f 1b f8  ..@..c0.)..T....
+	0x0010 fd 83 1f f8 fd 23 00 d1 e1 33 00 f9 e2 37 00 f9  .....#...3...7..
+	0x0020 16 00 00 14 e0 1b 00 f9 ff ff 03 a9 00 00 00 94  ................
+	0x0030 01 00 00 90 21 00 00 91 e1 1f 00 f9 e0 23 00 f9  ....!........#..
+	0x0040 1b 00 00 90 7b 03 00 91 62 03 40 f9 00 00 00 90  ....{...b.@.....
+	0x0050 00 00 00 91 e3 03 40 b2 e4 03 03 aa e1 03 02 aa  ......@.........
+	0x0060 e2 e3 00 91 00 00 00 94 e1 1b 40 f9 e2 37 40 f9  ..........@..7@.
+	0x0070 20 00 02 8b e1 33 40 f9 3f 00 00 eb 4a fd ff 54   ....3@.?...J..T
+	0x0080 fd fb 7f a9 ff 43 01 91 c0 03 5f d6 e0 07 00 f9  .....C...._.....
+	0x0090 e1 0b 00 f9 e2 0f 00 f9 e3 03 1e aa 00 00 00 94  ................
+	0x00a0 e0 07 40 f9 e1 0b 40 f9 e2 0f 40 f9 d5 ff ff 17  ..@...@...@.....
+	rel 0+0 t=23 type.int+0
+	rel 0+0 t=23 type.*os.File+0
+	rel 44+4 t=9 runtime.convT64+0
+	rel 48+8 t=3 type.int+0
+	rel 64+8 t=3 os.Stdout+0
+	rel 76+8 t=3 go.itab.*os.File,io.Writer+0
+	rel 100+4 t=9 fmt.Fprintln+0
+	rel 156+4 t=9 runtime.morestack_noctxt+0
 type..eq.[2]interface {} STEXT dupok size=192 args=0x10 locals=0x28 funcid=0x0 align=0x0
 	0x0000 00000 (<autogenerated>:1)	TEXT	type..eq.[2]interface {}(SB), DUPOK|ABIInternal, $48-16
 	0x0000 00000 (<autogenerated>:1)	MOVD	16(g), R16
@@ -819,6 +905,14 @@ main.forEachLoopNoIndex.stkobj SRODATA static size=40
 	0x0020 38 00 00 00 00 00 00 00                          8.......
 	rel 20+4 t=5 runtime.gcbits.02+0
 	rel 36+4 t=5 runtime.gcbits.55+0
+main.loopWithBreak.stkobj SRODATA static size=24
+	0x0000 01 00 00 00 00 00 00 00 f0 ff ff ff 10 00 00 00  ................
+	0x0010 10 00 00 00 00 00 00 00                          ........
+	rel 20+4 t=5 runtime.gcbits.02+0
+main.loopWithBreak.arginfo1 SRODATA static dupok size=7
+	0x0000 00 08 08 08 10 08 ff                             .......
+main.loopWithBreak.argliveinfo SRODATA static dupok size=3
+	0x0000 00 00 06                                         ...
 gclocals·TjPuuCwdlCpTaRQGRKTrYw== SRODATA dupok size=10
 	0x0000 02 00 00 00 02 00 00 00 03 00                    ..........
 type..eq.[2]interface {}.arginfo1 SRODATA static dupok size=3

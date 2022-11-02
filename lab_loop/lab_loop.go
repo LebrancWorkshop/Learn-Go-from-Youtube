@@ -13,6 +13,7 @@ func main() {
 	whileLoop(20, 30, 1);
 	forEachLoop();
 	forEachLoopNoIndex();
+	loopWithBreak(100, 120, 1);
 }
 
 func forLoop(startValue, endValue, rate int) {
@@ -41,5 +42,16 @@ func forEachLoopNoIndex() {
 	weapons := []string{"Sword", "Axe", "Bow", "Spear"};
 	for _, weapon := range weapons { // Range Loop can ignore some value by using _ (underscore).
 		fmt.Println(weapon);
+	}
+}
+
+func loopWithBreak(startValue, endValue, rate int) {
+	i := startValue;
+	for true {
+		if i > endValue {
+			break;
+		}
+		fmt.Println(i);
+		i += rate;
 	}
 }
