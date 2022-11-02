@@ -5,12 +5,8 @@ import (
 )
 
 func main() {
-	book := book.Book{
-		Name: "The Adventures of Cantonese Boy",
-		Author: "Lee Tek Chiew",
-		Category: "Novel",
-		Price: 100,
-	}
-	
+	book := book.New("The Alchemist", "Paulo Coelho", "Fiction", 100);
+	book.Display();
+	book.SetPrice(120);
 	book.Display();
 }
