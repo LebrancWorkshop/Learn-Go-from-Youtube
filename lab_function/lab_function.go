@@ -14,8 +14,8 @@ func main() {
 	x2, y2 := swap(100, 200);
 	fmt.Println(x2, y2); // Output: 200 100 
 
-	x3, y3 := swapOutputName(30, 80);
-	fmt.Println(x3, y3); // Output: 80 30 
+	x3, y3, result := swapOutputName(30, 80);
+	fmt.Println(result, x3, y3); // Output: Result 80 30 
 }
 
 func print(message string) {
@@ -30,8 +30,9 @@ func swap(input1 int, input2 int) (int, int) {
 	return input2, input1;
 }
 
-func swapOutputName(input1, input2 int) (newInput1, newInput2 int) {
+func swapOutputName(input1, input2 int) (newInput1, newInput2 int, result string) {
 	newInput1 = input2;
 	newInput2 = input1;
-	return newInput1, newInput2;
+	result = "Result";
+	return
 }
