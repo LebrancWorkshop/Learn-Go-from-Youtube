@@ -24,7 +24,7 @@ func main() {
 	fmt.Printf("Artist: %s\n", stardust.artist);
 
 	showTrack(stardust);
-	updatePrice(&stardust, 100);
+	stardust.setPrice(200);
 	showTrack(stardust);
 }
 
@@ -43,4 +43,14 @@ func updatePrice(track *Track, additionalPrice int) {
 
 func updatePriceByValue(track Track, additionalPrice int) {
 	track.price += additionalPrice;
+}
+
+func (track *Track) clearPrice() Track {
+	track.price = 0;
+	return *track;
+}
+
+func (track *Track) setPrice(price int) Track {
+	track.price = price;
+	return *track;
 }

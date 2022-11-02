@@ -4,7 +4,7 @@ main.main STEXT size=576 args=0x0 locals=0x118 funcid=0x0 align=0x0
 	0x0004 00004 (lab_struct.go:15)	PCDATA	$0, $-2
 	0x0004 00004 (lab_struct.go:15)	SUB	$160, RSP, R17
 	0x0008 00008 (lab_struct.go:15)	CMP	R16, R17
-	0x000c 00012 (lab_struct.go:15)	BLS	556
+	0x000c 00012 (lab_struct.go:15)	BLS	552
 	0x0010 00016 (lab_struct.go:15)	PCDATA	$0, $-1
 	0x0010 00016 (lab_struct.go:15)	SUB	$288, RSP, R20
 	0x0014 00020 (lab_struct.go:15)	STP	(R29, R30), -8(R20)
@@ -38,7 +38,7 @@ main.main STEXT size=576 args=0x0 locals=0x118 funcid=0x0 align=0x0
 	0x0080 00128 (lab_struct.go:20)	MOVD	R2, main.stardust-88(SP)
 	0x0084 00132 (lab_struct.go:21)	MOVD	$80, R2
 	0x0088 00136 (lab_struct.go:21)	MOVD	R2, main.stardust-80(SP)
-	0x008c 00140 (lab_struct.go:23)	MOVD	$main..autotmp_26-72(SP), R17
+	0x008c 00140 (lab_struct.go:23)	MOVD	$main..autotmp_27-72(SP), R17
 	0x0090 00144 (lab_struct.go:23)	MOVD	$main.stardust-144(SP), R16
 	0x0094 00148 (lab_struct.go:23)	MOVD	$main.stardust-80(SP), R2
 	0x0098 00152 (lab_struct.go:23)	PCDATA	$0, $-2
@@ -47,14 +47,14 @@ main.main STEXT size=576 args=0x0 locals=0x118 funcid=0x0 align=0x0
 	0x00a0 00160 (lab_struct.go:23)	PCDATA	$0, $-1
 	0x00a0 00160 (lab_struct.go:23)	CMP	R2, R16
 	0x00a4 00164 (lab_struct.go:23)	BLE	152
-	0x00a8 00168 (lab_struct.go:23)	STP	(ZR, ZR), main..autotmp_30-160(SP)
+	0x00a8 00168 (lab_struct.go:23)	STP	(ZR, ZR), main..autotmp_31-160(SP)
 	0x00ac 00172 (lab_struct.go:23)	MOVD	$type.main.Track(SB), R0
-	0x00b4 00180 (lab_struct.go:23)	MOVD	$main..autotmp_26-72(SP), R1
+	0x00b4 00180 (lab_struct.go:23)	MOVD	$main..autotmp_27-72(SP), R1
 	0x00b8 00184 (lab_struct.go:23)	PCDATA	$1, $1
 	0x00b8 00184 (lab_struct.go:23)	CALL	runtime.convT(SB)
 	0x00bc 00188 (lab_struct.go:23)	MOVD	$type.main.Track(SB), R2
-	0x00c4 00196 (lab_struct.go:23)	MOVD	R2, main..autotmp_30-160(SP)
-	0x00c8 00200 (lab_struct.go:23)	MOVD	R0, main..autotmp_30-152(SP)
+	0x00c4 00196 (lab_struct.go:23)	MOVD	R2, main..autotmp_31-160(SP)
+	0x00c8 00200 (lab_struct.go:23)	MOVD	R0, main..autotmp_31-152(SP)
 	0x00cc 00204 (<unknown line number>)	NOP
 	0x00cc 00204 (<unknown line number>)	PCDATA	$0, $-3
 	0x00cc 00204 ($GOROOT/src/fmt/print.go:294)	MOVD	os.Stdout(SB), R1
@@ -62,17 +62,17 @@ main.main STEXT size=576 args=0x0 locals=0x118 funcid=0x0 align=0x0
 	0x00d8 00216 ($GOROOT/src/fmt/print.go:294)	MOVD	$go.itab.*os.File,io.Writer(SB), R0
 	0x00e0 00224 ($GOROOT/src/fmt/print.go:294)	MOVD	$1, R3
 	0x00e4 00228 ($GOROOT/src/fmt/print.go:294)	MOVD	R3, R4
-	0x00e8 00232 ($GOROOT/src/fmt/print.go:294)	MOVD	$main..autotmp_30-160(SP), R2
+	0x00e8 00232 ($GOROOT/src/fmt/print.go:294)	MOVD	$main..autotmp_31-160(SP), R2
 	0x00ec 00236 ($GOROOT/src/fmt/print.go:294)	PCDATA	$1, $2
 	0x00ec 00236 ($GOROOT/src/fmt/print.go:294)	CALL	fmt.Fprintln(SB)
-	0x00f0 00240 (lab_struct.go:24)	STP	(ZR, ZR), main..autotmp_33-176(SP)
+	0x00f0 00240 (lab_struct.go:24)	STP	(ZR, ZR), main..autotmp_34-176(SP)
 	0x00f4 00244 (lab_struct.go:24)	MOVD	main.stardust-128(SP), R0
 	0x00f8 00248 (lab_struct.go:24)	MOVD	main.stardust-120(SP), R1
 	0x00fc 00252 (lab_struct.go:24)	PCDATA	$1, $3
 	0x00fc 00252 (lab_struct.go:24)	CALL	runtime.convTstring(SB)
 	0x0100 00256 (lab_struct.go:24)	MOVD	$type.string(SB), R2
-	0x0108 00264 (lab_struct.go:24)	MOVD	R2, main..autotmp_33-176(SP)
-	0x010c 00268 (lab_struct.go:24)	MOVD	R0, main..autotmp_33-168(SP)
+	0x0108 00264 (lab_struct.go:24)	MOVD	R2, main..autotmp_34-176(SP)
+	0x010c 00268 (lab_struct.go:24)	MOVD	R0, main..autotmp_34-168(SP)
 	0x0110 00272 (<unknown line number>)	NOP
 	0x0110 00272 (<unknown line number>)	PCDATA	$0, $-4
 	0x0110 00272 ($GOROOT/src/fmt/print.go:213)	MOVD	os.Stdout(SB), R1
@@ -80,13 +80,13 @@ main.main STEXT size=576 args=0x0 locals=0x118 funcid=0x0 align=0x0
 	0x011c 00284 ($GOROOT/src/fmt/print.go:213)	MOVD	$go.itab.*os.File,io.Writer(SB), R0
 	0x0124 00292 ($GOROOT/src/fmt/print.go:213)	MOVD	$go.string."Artist: %s\n"(SB), R2
 	0x012c 00300 ($GOROOT/src/fmt/print.go:213)	MOVD	$11, R3
-	0x0130 00304 ($GOROOT/src/fmt/print.go:213)	MOVD	$main..autotmp_33-176(SP), R4
+	0x0130 00304 ($GOROOT/src/fmt/print.go:213)	MOVD	$main..autotmp_34-176(SP), R4
 	0x0134 00308 ($GOROOT/src/fmt/print.go:213)	MOVD	$1, R5
 	0x0138 00312 ($GOROOT/src/fmt/print.go:213)	MOVD	R5, R6
 	0x013c 00316 ($GOROOT/src/fmt/print.go:213)	PCDATA	$1, $2
 	0x013c 00316 ($GOROOT/src/fmt/print.go:213)	CALL	fmt.Fprintf(SB)
 	0x0140 00320 (lab_struct.go:26)	HINT	ZR
-	0x0144 00324 (lab_struct.go:32)	MOVD	$main..autotmp_26-72(SP), R17
+	0x0144 00324 (lab_struct.go:32)	MOVD	$main..autotmp_27-72(SP), R17
 	0x0148 00328 (lab_struct.go:32)	MOVD	$main.stardust-144(SP), R16
 	0x014c 00332 (lab_struct.go:32)	MOVD	$main.stardust-80(SP), R2
 	0x0150 00336 (lab_struct.go:32)	PCDATA	$0, $-2
@@ -95,14 +95,14 @@ main.main STEXT size=576 args=0x0 locals=0x118 funcid=0x0 align=0x0
 	0x0158 00344 (lab_struct.go:32)	PCDATA	$0, $-1
 	0x0158 00344 (lab_struct.go:32)	CMP	R2, R16
 	0x015c 00348 (lab_struct.go:32)	BLE	336
-	0x0160 00352 (lab_struct.go:32)	STP	(ZR, ZR), main..autotmp_36-192(SP)
+	0x0160 00352 (lab_struct.go:32)	STP	(ZR, ZR), main..autotmp_37-192(SP)
 	0x0164 00356 (lab_struct.go:32)	MOVD	$type.main.Track(SB), R0
-	0x016c 00364 (lab_struct.go:32)	MOVD	$main..autotmp_26-72(SP), R1
+	0x016c 00364 (lab_struct.go:32)	MOVD	$main..autotmp_27-72(SP), R1
 	0x0170 00368 (lab_struct.go:32)	PCDATA	$1, $4
 	0x0170 00368 (lab_struct.go:32)	CALL	runtime.convT(SB)
 	0x0174 00372 (lab_struct.go:32)	MOVD	$type.main.Track(SB), R2
-	0x017c 00380 (lab_struct.go:32)	MOVD	R2, main..autotmp_36-192(SP)
-	0x0180 00384 (lab_struct.go:32)	MOVD	R0, main..autotmp_36-184(SP)
+	0x017c 00380 (lab_struct.go:32)	MOVD	R2, main..autotmp_37-192(SP)
+	0x0180 00384 (lab_struct.go:32)	MOVD	R0, main..autotmp_37-184(SP)
 	0x0184 00388 (<unknown line number>)	NOP
 	0x0184 00388 (<unknown line number>)	PCDATA	$0, $-3
 	0x0184 00388 ($GOROOT/src/fmt/print.go:294)	MOVD	os.Stdout(SB), R1
@@ -110,52 +110,51 @@ main.main STEXT size=576 args=0x0 locals=0x118 funcid=0x0 align=0x0
 	0x0190 00400 ($GOROOT/src/fmt/print.go:294)	MOVD	$go.itab.*os.File,io.Writer(SB), R0
 	0x0198 00408 ($GOROOT/src/fmt/print.go:294)	MOVD	$1, R3
 	0x019c 00412 ($GOROOT/src/fmt/print.go:294)	MOVD	R3, R4
-	0x01a0 00416 ($GOROOT/src/fmt/print.go:294)	MOVD	$main..autotmp_36-192(SP), R2
+	0x01a0 00416 ($GOROOT/src/fmt/print.go:294)	MOVD	$main..autotmp_37-192(SP), R2
 	0x01a4 00420 ($GOROOT/src/fmt/print.go:294)	PCDATA	$1, $2
 	0x01a4 00420 ($GOROOT/src/fmt/print.go:294)	CALL	fmt.Fprintln(SB)
 	0x01a8 00424 (lab_struct.go:27)	HINT	ZR
-	0x01ac 00428 (lab_struct.go:41)	MOVD	main.stardust-80(SP), R2
-	0x01b0 00432 (lab_struct.go:41)	ADD	$100, R2, R2
-	0x01b4 00436 (lab_struct.go:41)	MOVD	R2, main.stardust-80(SP)
-	0x01b8 00440 (lab_struct.go:28)	HINT	ZR
-	0x01bc 00444 (lab_struct.go:32)	MOVD	$main..autotmp_26-72(SP), R17
-	0x01c0 00448 (lab_struct.go:32)	MOVD	$main.stardust-144(SP), R16
-	0x01c4 00452 (lab_struct.go:32)	MOVD	$main.stardust-80(SP), R2
-	0x01c8 00456 (lab_struct.go:32)	PCDATA	$0, $-2
-	0x01c8 00456 (lab_struct.go:32)	MOVD.P	8(R16), R27
-	0x01cc 00460 (lab_struct.go:32)	MOVD.P	R27, 8(R17)
-	0x01d0 00464 (lab_struct.go:32)	PCDATA	$0, $-1
-	0x01d0 00464 (lab_struct.go:32)	CMP	R2, R16
-	0x01d4 00468 (lab_struct.go:32)	BLE	456
-	0x01d8 00472 (lab_struct.go:32)	STP	(ZR, ZR), main..autotmp_39-208(SP)
-	0x01dc 00476 (lab_struct.go:32)	MOVD	$type.main.Track(SB), R0
-	0x01e4 00484 (lab_struct.go:32)	MOVD	$main..autotmp_26-72(SP), R1
-	0x01e8 00488 (lab_struct.go:32)	PCDATA	$1, $5
-	0x01e8 00488 (lab_struct.go:32)	CALL	runtime.convT(SB)
-	0x01ec 00492 (lab_struct.go:32)	MOVD	$type.main.Track(SB), R2
-	0x01f4 00500 (lab_struct.go:32)	MOVD	R2, main..autotmp_39-208(SP)
-	0x01f8 00504 (lab_struct.go:32)	MOVD	R0, main..autotmp_39-200(SP)
-	0x01fc 00508 (<unknown line number>)	NOP
-	0x01fc 00508 (<unknown line number>)	PCDATA	$0, $-4
-	0x01fc 00508 ($GOROOT/src/fmt/print.go:294)	MOVD	os.Stdout(SB), R1
-	0x0208 00520 ($GOROOT/src/fmt/print.go:294)	PCDATA	$0, $-1
-	0x0208 00520 ($GOROOT/src/fmt/print.go:294)	MOVD	$go.itab.*os.File,io.Writer(SB), R0
-	0x0210 00528 ($GOROOT/src/fmt/print.go:294)	MOVD	$main..autotmp_39-208(SP), R2
-	0x0214 00532 ($GOROOT/src/fmt/print.go:294)	MOVD	$1, R3
-	0x0218 00536 ($GOROOT/src/fmt/print.go:294)	MOVD	R3, R4
-	0x021c 00540 ($GOROOT/src/fmt/print.go:294)	PCDATA	$1, ZR
-	0x021c 00540 ($GOROOT/src/fmt/print.go:294)	CALL	fmt.Fprintln(SB)
-	0x0220 00544 (lab_struct.go:29)	LDP	-8(RSP), (R29, R30)
-	0x0224 00548 (lab_struct.go:29)	ADD	$288, RSP
-	0x0228 00552 (lab_struct.go:29)	RET	(R30)
-	0x022c 00556 (lab_struct.go:29)	NOP
-	0x022c 00556 (lab_struct.go:15)	PCDATA	$1, $-1
-	0x022c 00556 (lab_struct.go:15)	PCDATA	$0, $-2
-	0x022c 00556 (lab_struct.go:15)	MOVD	R30, R3
-	0x0230 00560 (lab_struct.go:15)	CALL	runtime.morestack_noctxt(SB)
-	0x0234 00564 (lab_struct.go:15)	PCDATA	$0, $-1
-	0x0234 00564 (lab_struct.go:15)	JMP	0
-	0x0000 90 0b 40 f9 f1 83 02 d1 3f 02 10 eb 09 11 00 54  ..@.....?......T
+	0x01ac 00428 (lab_struct.go:54)	MOVD	$200, R2
+	0x01b0 00432 (lab_struct.go:54)	MOVD	R2, main.stardust-80(SP)
+	0x01b4 00436 (lab_struct.go:28)	HINT	ZR
+	0x01b8 00440 (lab_struct.go:32)	MOVD	$main..autotmp_27-72(SP), R17
+	0x01bc 00444 (lab_struct.go:32)	MOVD	$main.stardust-144(SP), R16
+	0x01c0 00448 (lab_struct.go:32)	MOVD	$main.stardust-80(SP), R2
+	0x01c4 00452 (lab_struct.go:32)	PCDATA	$0, $-2
+	0x01c4 00452 (lab_struct.go:32)	MOVD.P	8(R16), R27
+	0x01c8 00456 (lab_struct.go:32)	MOVD.P	R27, 8(R17)
+	0x01cc 00460 (lab_struct.go:32)	PCDATA	$0, $-1
+	0x01cc 00460 (lab_struct.go:32)	CMP	R2, R16
+	0x01d0 00464 (lab_struct.go:32)	BLE	452
+	0x01d4 00468 (lab_struct.go:32)	STP	(ZR, ZR), main..autotmp_40-208(SP)
+	0x01d8 00472 (lab_struct.go:32)	MOVD	$type.main.Track(SB), R0
+	0x01e0 00480 (lab_struct.go:32)	MOVD	$main..autotmp_27-72(SP), R1
+	0x01e4 00484 (lab_struct.go:32)	PCDATA	$1, $5
+	0x01e4 00484 (lab_struct.go:32)	CALL	runtime.convT(SB)
+	0x01e8 00488 (lab_struct.go:32)	MOVD	$type.main.Track(SB), R2
+	0x01f0 00496 (lab_struct.go:32)	MOVD	R2, main..autotmp_40-208(SP)
+	0x01f4 00500 (lab_struct.go:32)	MOVD	R0, main..autotmp_40-200(SP)
+	0x01f8 00504 (<unknown line number>)	NOP
+	0x01f8 00504 (<unknown line number>)	PCDATA	$0, $-4
+	0x01f8 00504 ($GOROOT/src/fmt/print.go:294)	MOVD	os.Stdout(SB), R1
+	0x0204 00516 ($GOROOT/src/fmt/print.go:294)	PCDATA	$0, $-1
+	0x0204 00516 ($GOROOT/src/fmt/print.go:294)	MOVD	$go.itab.*os.File,io.Writer(SB), R0
+	0x020c 00524 ($GOROOT/src/fmt/print.go:294)	MOVD	$main..autotmp_40-208(SP), R2
+	0x0210 00528 ($GOROOT/src/fmt/print.go:294)	MOVD	$1, R3
+	0x0214 00532 ($GOROOT/src/fmt/print.go:294)	MOVD	R3, R4
+	0x0218 00536 ($GOROOT/src/fmt/print.go:294)	PCDATA	$1, ZR
+	0x0218 00536 ($GOROOT/src/fmt/print.go:294)	CALL	fmt.Fprintln(SB)
+	0x021c 00540 (lab_struct.go:29)	LDP	-8(RSP), (R29, R30)
+	0x0220 00544 (lab_struct.go:29)	ADD	$288, RSP
+	0x0224 00548 (lab_struct.go:29)	RET	(R30)
+	0x0228 00552 (lab_struct.go:29)	NOP
+	0x0228 00552 (lab_struct.go:15)	PCDATA	$1, $-1
+	0x0228 00552 (lab_struct.go:15)	PCDATA	$0, $-2
+	0x0228 00552 (lab_struct.go:15)	MOVD	R30, R3
+	0x022c 00556 (lab_struct.go:15)	CALL	runtime.morestack_noctxt(SB)
+	0x0230 00560 (lab_struct.go:15)	PCDATA	$0, $-1
+	0x0230 00560 (lab_struct.go:15)	JMP	0
+	0x0000 90 0b 40 f9 f1 83 02 d1 3f 02 10 eb e9 10 00 54  ..@.....?......T
 	0x0010 f4 83 04 d1 9d fa 3f a9 9f 02 00 91 fd 23 00 d1  ......?......#..
 	0x0020 ff ff 08 a9 ff ff 09 a9 ff ff 0a a9 ff ff 0b a9  ................
 	0x0030 ff 67 00 f9 02 00 00 90 42 00 00 91 e2 47 00 f9  .g......B....G..
@@ -181,16 +180,16 @@ main.main STEXT size=576 args=0x0 locals=0x118 funcid=0x0 align=0x0
 	0x0170 00 00 00 94 02 00 00 90 42 00 00 91 e2 2f 00 f9  ........B..../..
 	0x0180 e0 33 00 f9 1b 00 00 90 7b 03 00 91 61 03 40 f9  .3......{...a.@.
 	0x0190 00 00 00 90 00 00 00 91 e3 03 40 b2 e4 03 03 aa  ..........@.....
-	0x01a0 e2 63 01 91 00 00 00 94 1f 20 03 d5 e2 67 40 f9  .c....... ...g@.
-	0x01b0 42 90 01 91 e2 67 00 f9 1f 20 03 d5 f1 43 03 91  B....g... ...C..
-	0x01c0 f0 23 02 91 e2 23 03 91 1b 86 40 f8 3b 86 00 f8  .#...#....@.;...
-	0x01d0 1f 02 02 eb ad ff ff 54 ff ff 04 a9 00 00 00 90  .......T........
-	0x01e0 00 00 00 91 e1 43 03 91 00 00 00 94 02 00 00 90  .....C..........
-	0x01f0 42 00 00 91 e2 27 00 f9 e0 2b 00 f9 1b 00 00 90  B....'...+......
-	0x0200 7b 03 00 91 61 03 40 f9 00 00 00 90 00 00 00 91  {...a.@.........
-	0x0210 e2 23 01 91 e3 03 40 b2 e4 03 03 aa 00 00 00 94  .#....@.........
-	0x0220 fd fb 7f a9 ff 83 04 91 c0 03 5f d6 e3 03 1e aa  .........._.....
-	0x0230 00 00 00 94 73 ff ff 17 00 00 00 00 00 00 00 00  ....s...........
+	0x01a0 e2 63 01 91 00 00 00 94 1f 20 03 d5 02 19 80 d2  .c....... ......
+	0x01b0 e2 67 00 f9 1f 20 03 d5 f1 43 03 91 f0 23 02 91  .g... ...C...#..
+	0x01c0 e2 23 03 91 1b 86 40 f8 3b 86 00 f8 1f 02 02 eb  .#....@.;.......
+	0x01d0 ad ff ff 54 ff ff 04 a9 00 00 00 90 00 00 00 91  ...T............
+	0x01e0 e1 43 03 91 00 00 00 94 02 00 00 90 42 00 00 91  .C..........B...
+	0x01f0 e2 27 00 f9 e0 2b 00 f9 1b 00 00 90 7b 03 00 91  .'...+......{...
+	0x0200 61 03 40 f9 00 00 00 90 00 00 00 91 e2 23 01 91  a.@..........#..
+	0x0210 e3 03 40 b2 e4 03 03 aa 00 00 00 94 fd fb 7f a9  ..@.............
+	0x0220 ff 83 04 91 c0 03 5f d6 e3 03 1e aa 00 00 00 94  ......_.........
+	0x0230 74 ff ff 17 00 00 00 00 00 00 00 00 00 00 00 00  t...............
 	rel 0+0 t=23 type.main.Track+0
 	rel 0+0 t=23 type.*os.File+0
 	rel 0+0 t=23 type.string+0
@@ -221,13 +220,13 @@ main.main STEXT size=576 args=0x0 locals=0x118 funcid=0x0 align=0x0
 	rel 388+8 t=3 os.Stdout+0
 	rel 400+8 t=3 go.itab.*os.File,io.Writer+0
 	rel 420+4 t=9 fmt.Fprintln+0
-	rel 476+8 t=3 type.main.Track+0
-	rel 488+4 t=9 runtime.convT+0
-	rel 492+8 t=3 type.main.Track+0
-	rel 508+8 t=3 os.Stdout+0
-	rel 520+8 t=3 go.itab.*os.File,io.Writer+0
-	rel 540+4 t=9 fmt.Fprintln+0
-	rel 560+4 t=9 runtime.morestack_noctxt+0
+	rel 472+8 t=3 type.main.Track+0
+	rel 484+4 t=9 runtime.convT+0
+	rel 488+8 t=3 type.main.Track+0
+	rel 504+8 t=3 os.Stdout+0
+	rel 516+8 t=3 go.itab.*os.File,io.Writer+0
+	rel 536+4 t=9 fmt.Fprintln+0
+	rel 556+4 t=9 runtime.morestack_noctxt+0
 main.showTrack STEXT size=272 args=0x48 locals=0x88 funcid=0x0 align=0x0
 	0x0000 00000 (lab_struct.go:31)	TEXT	main.showTrack(SB), ABIInternal, $144-72
 	0x0000 00000 (lab_struct.go:31)	MOVD	16(g), R16
@@ -458,6 +457,94 @@ main.updatePriceByValue STEXT size=48 args=0x50 locals=0x0 funcid=0x0 align=0x0 
 	0x0000 e0 07 00 f9 e1 0b 00 f9 e2 0f 00 f9 e3 13 00 f9  ................
 	0x0010 e4 17 00 f9 e5 1b 00 f9 e6 1f 00 f9 e7 23 00 f9  .............#..
 	0x0020 00 01 09 8b e0 27 00 f9 c0 03 5f d6 00 00 00 00  .....'...._.....
+main.(*Track).clearPrice STEXT nosplit size=112 args=0x8 locals=0x58 funcid=0x0 align=0x0 leaf
+	0x0000 00000 (lab_struct.go:48)	TEXT	main.(*Track).clearPrice(SB), NOSPLIT|LEAF|ABIInternal, $96-8
+	0x0000 00000 (lab_struct.go:48)	MOVD.W	R30, -96(RSP)
+	0x0004 00004 (lab_struct.go:48)	MOVD	R29, -8(RSP)
+	0x0008 00008 (lab_struct.go:48)	SUB	$8, RSP, R29
+	0x000c 00012 (lab_struct.go:48)	FUNCDATA	ZR, gclocals·wgcWObbY2HYnK2SU/U22lA==(SB)
+	0x000c 00012 (lab_struct.go:48)	FUNCDATA	$1, gclocals·SoG6d3SEFU105ym5LEtOUA==(SB)
+	0x000c 00012 (lab_struct.go:48)	FUNCDATA	$5, main.(*Track).clearPrice.arginfo1(SB)
+	0x000c 00012 (lab_struct.go:48)	FUNCDATA	$6, main.(*Track).clearPrice.argliveinfo(SB)
+	0x000c 00012 (lab_struct.go:48)	PCDATA	$3, $1
+	0x000c 00012 (lab_struct.go:48)	STP	(ZR, ZR), main.~r0-72(SP)
+	0x0010 00016 (lab_struct.go:48)	STP	(ZR, ZR), main.~r0-56(SP)
+	0x0014 00020 (lab_struct.go:48)	STP	(ZR, ZR), main.~r0-40(SP)
+	0x0018 00024 (lab_struct.go:48)	STP	(ZR, ZR), main.~r0-24(SP)
+	0x001c 00028 (lab_struct.go:48)	MOVD	ZR, main.~r0-8(SP)
+	0x0020 00032 (lab_struct.go:49)	MOVD	ZR, 64(R0)
+	0x0024 00036 (lab_struct.go:50)	ADD	$64, R0, R9
+	0x0028 00040 (lab_struct.go:50)	MOVD	$main.~r0-72(SP), R17
+	0x002c 00044 (lab_struct.go:50)	MOVD	R0, R16
+	0x0030 00048 (lab_struct.go:50)	PCDATA	$0, $-2
+	0x0030 00048 (lab_struct.go:50)	MOVD.P	8(R16), R27
+	0x0034 00052 (lab_struct.go:50)	MOVD.P	R27, 8(R17)
+	0x0038 00056 (lab_struct.go:50)	PCDATA	$0, $-1
+	0x0038 00056 (lab_struct.go:50)	CMP	R9, R16
+	0x003c 00060 (lab_struct.go:50)	BLE	48
+	0x0040 00064 (lab_struct.go:50)	MOVD	main.~r0-72(SP), R0
+	0x0044 00068 (lab_struct.go:50)	MOVD	main.~r0-64(SP), R1
+	0x0048 00072 (lab_struct.go:50)	MOVD	main.~r0-56(SP), R2
+	0x004c 00076 (lab_struct.go:50)	MOVD	main.~r0-48(SP), R3
+	0x0050 00080 (lab_struct.go:50)	MOVD	main.~r0-40(SP), R4
+	0x0054 00084 (lab_struct.go:50)	MOVD	main.~r0-32(SP), R5
+	0x0058 00088 (lab_struct.go:50)	MOVD	main.~r0-24(SP), R6
+	0x005c 00092 (lab_struct.go:50)	MOVD	main.~r0-16(SP), R7
+	0x0060 00096 (lab_struct.go:50)	MOVD	main.~r0-8(SP), R8
+	0x0064 00100 (lab_struct.go:50)	ADD	$96, RSP
+	0x0068 00104 (lab_struct.go:50)	SUB	$8, RSP, R29
+	0x006c 00108 (lab_struct.go:50)	RET	(R30)
+	0x0000 fe 0f 1a f8 fd 83 1f f8 fd 23 00 d1 ff 7f 01 a9  .........#......
+	0x0010 ff 7f 02 a9 ff 7f 03 a9 ff 7f 04 a9 ff 2b 00 f9  .............+..
+	0x0020 1f 20 00 f9 09 00 01 91 f1 43 00 91 f0 03 00 aa  . .......C......
+	0x0030 1b 86 40 f8 3b 86 00 f8 1f 02 09 eb ad ff ff 54  ..@.;..........T
+	0x0040 e0 0b 40 f9 e1 0f 40 f9 e2 13 40 f9 e3 17 40 f9  ..@...@...@...@.
+	0x0050 e4 1b 40 f9 e5 1f 40 f9 e6 23 40 f9 e7 27 40 f9  ..@...@..#@..'@.
+	0x0060 e8 2b 40 f9 ff 83 01 91 fd 23 00 d1 c0 03 5f d6  .+@......#...._.
+main.(*Track).setPrice STEXT nosplit size=112 args=0x10 locals=0x58 funcid=0x0 align=0x0 leaf
+	0x0000 00000 (lab_struct.go:53)	TEXT	main.(*Track).setPrice(SB), NOSPLIT|LEAF|ABIInternal, $96-16
+	0x0000 00000 (lab_struct.go:53)	MOVD.W	R30, -96(RSP)
+	0x0004 00004 (lab_struct.go:53)	MOVD	R29, -8(RSP)
+	0x0008 00008 (lab_struct.go:53)	SUB	$8, RSP, R29
+	0x000c 00012 (lab_struct.go:53)	FUNCDATA	ZR, gclocals·wgcWObbY2HYnK2SU/U22lA==(SB)
+	0x000c 00012 (lab_struct.go:53)	FUNCDATA	$1, gclocals·SoG6d3SEFU105ym5LEtOUA==(SB)
+	0x000c 00012 (lab_struct.go:53)	FUNCDATA	$5, main.(*Track).setPrice.arginfo1(SB)
+	0x000c 00012 (lab_struct.go:53)	FUNCDATA	$6, main.(*Track).setPrice.argliveinfo(SB)
+	0x000c 00012 (lab_struct.go:53)	PCDATA	$3, $1
+	0x000c 00012 (lab_struct.go:53)	STP	(ZR, ZR), main.~r0-72(SP)
+	0x0010 00016 (lab_struct.go:53)	STP	(ZR, ZR), main.~r0-56(SP)
+	0x0014 00020 (lab_struct.go:53)	STP	(ZR, ZR), main.~r0-40(SP)
+	0x0018 00024 (lab_struct.go:53)	STP	(ZR, ZR), main.~r0-24(SP)
+	0x001c 00028 (lab_struct.go:53)	MOVD	ZR, main.~r0-8(SP)
+	0x0020 00032 (lab_struct.go:54)	MOVD	R1, 64(R0)
+	0x0024 00036 (lab_struct.go:55)	ADD	$64, R0, R9
+	0x0028 00040 (lab_struct.go:55)	MOVD	$main.~r0-72(SP), R17
+	0x002c 00044 (lab_struct.go:55)	MOVD	R0, R16
+	0x0030 00048 (lab_struct.go:55)	PCDATA	$0, $-2
+	0x0030 00048 (lab_struct.go:55)	MOVD.P	8(R16), R27
+	0x0034 00052 (lab_struct.go:55)	MOVD.P	R27, 8(R17)
+	0x0038 00056 (lab_struct.go:55)	PCDATA	$0, $-1
+	0x0038 00056 (lab_struct.go:55)	CMP	R9, R16
+	0x003c 00060 (lab_struct.go:55)	BLE	48
+	0x0040 00064 (lab_struct.go:55)	MOVD	main.~r0-72(SP), R0
+	0x0044 00068 (lab_struct.go:55)	MOVD	main.~r0-64(SP), R1
+	0x0048 00072 (lab_struct.go:55)	MOVD	main.~r0-56(SP), R2
+	0x004c 00076 (lab_struct.go:55)	MOVD	main.~r0-48(SP), R3
+	0x0050 00080 (lab_struct.go:55)	MOVD	main.~r0-40(SP), R4
+	0x0054 00084 (lab_struct.go:55)	MOVD	main.~r0-32(SP), R5
+	0x0058 00088 (lab_struct.go:55)	MOVD	main.~r0-24(SP), R6
+	0x005c 00092 (lab_struct.go:55)	MOVD	main.~r0-16(SP), R7
+	0x0060 00096 (lab_struct.go:55)	MOVD	main.~r0-8(SP), R8
+	0x0064 00100 (lab_struct.go:55)	ADD	$96, RSP
+	0x0068 00104 (lab_struct.go:55)	SUB	$8, RSP, R29
+	0x006c 00108 (lab_struct.go:55)	RET	(R30)
+	0x0000 fe 0f 1a f8 fd 83 1f f8 fd 23 00 d1 ff 7f 01 a9  .........#......
+	0x0010 ff 7f 02 a9 ff 7f 03 a9 ff 7f 04 a9 ff 2b 00 f9  .............+..
+	0x0020 01 20 00 f9 09 00 01 91 f1 43 00 91 f0 03 00 aa  . .......C......
+	0x0030 1b 86 40 f8 3b 86 00 f8 1f 02 09 eb ad ff ff 54  ..@.;..........T
+	0x0040 e0 0b 40 f9 e1 0f 40 f9 e2 13 40 f9 e3 17 40 f9  ..@...@...@...@.
+	0x0050 e4 1b 40 f9 e5 1f 40 f9 e6 23 40 f9 e7 27 40 f9  ..@...@..#@..'@.
+	0x0060 e8 2b 40 f9 ff 83 01 91 fd 23 00 d1 c0 03 5f d6  .+@......#...._.
 type..eq.main.Track STEXT dupok size=272 args=0x10 locals=0x28 funcid=0x0 align=0x0
 	0x0000 00000 (<autogenerated>:1)	TEXT	type..eq.main.Track(SB), DUPOK|ABIInternal, $48-16
 	0x0000 00000 (<autogenerated>:1)	MOVD	16(g), R16
@@ -595,13 +682,13 @@ go.info.main.showTrack$abstract SDWARFABSFCN dupok size=31
 	0x0000 05 6d 61 69 6e 2e 73 68 6f 77 54 72 61 63 6b 00  .main.showTrack.
 	0x0010 01 01 13 74 72 61 63 6b 00 00 00 00 00 00 00     ...track.......
 	rel 26+4 t=31 go.info.main.Track+0
-go.info.main.updatePrice$abstract SDWARFABSFCN dupok size=55
-	0x0000 05 6d 61 69 6e 2e 75 70 64 61 74 65 50 72 69 63  .main.updatePric
-	0x0010 65 00 01 01 13 74 72 61 63 6b 00 00 00 00 00 00  e....track......
-	0x0020 13 61 64 64 69 74 69 6f 6e 61 6c 50 72 69 63 65  .additionalPrice
-	0x0030 00 00 00 00 00 00 00                             .......
-	rel 28+4 t=31 go.info.*main.Track+0
-	rel 50+4 t=31 go.info.int+0
+go.info.main.(*Track).setPrice$abstract SDWARFABSFCN dupok size=51
+	0x0000 05 6d 61 69 6e 2e 28 2a 54 72 61 63 6b 29 2e 73  .main.(*Track).s
+	0x0010 65 74 50 72 69 63 65 00 01 01 13 74 72 61 63 6b  etPrice....track
+	0x0020 00 00 00 00 00 00 13 70 72 69 63 65 00 00 00 00  .......price....
+	0x0030 00 00 00                                         ...
+	rel 34+4 t=31 go.info.*main.Track+0
+	rel 46+4 t=31 go.info.int+0
 main..inittask SNOPTRDATA size=32
 	0x0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00  ................
 	0x0010 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
@@ -632,19 +719,127 @@ runtime.gcbits.01 SRODATA dupok size=1
 	0x0000 01                                               .
 type..namedata.*main.Track. SRODATA dupok size=13
 	0x0000 01 0b 2a 6d 61 69 6e 2e 54 72 61 63 6b           ..*main.Track
-type.*main.Track SRODATA size=56
+type..namedata.*func(*main.Track) main.Track- SRODATA dupok size=31
+	0x0000 00 1d 2a 66 75 6e 63 28 2a 6d 61 69 6e 2e 54 72  ..*func(*main.Tr
+	0x0010 61 63 6b 29 20 6d 61 69 6e 2e 54 72 61 63 6b     ack) main.Track
+type.*func(*main.Track) main.Track SRODATA dupok size=56
 	0x0000 08 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00  ................
-	0x0010 14 4a 6c 84 08 08 08 36 00 00 00 00 00 00 00 00  .Jl....6........
+	0x0010 06 de b7 f6 08 08 08 36 00 00 00 00 00 00 00 00  .......6........
 	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
 	0x0030 00 00 00 00 00 00 00 00                          ........
 	rel 24+8 t=1 runtime.memequal64·f+0
 	rel 32+8 t=1 runtime.gcbits.01+0
-	rel 40+4 t=5 type..namedata.*main.Track.+0
-	rel 48+8 t=1 type.main.Track+0
-runtime.gcbits.55 SRODATA dupok size=1
-	0x0000 55                                               U
+	rel 40+4 t=5 type..namedata.*func(*main.Track) main.Track-+0
+	rel 48+8 t=1 type.func(*main.Track) main.Track+0
+type.func(*main.Track) main.Track SRODATA dupok size=72
+	0x0000 08 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00  ................
+	0x0010 ed 8e aa e2 02 08 08 33 00 00 00 00 00 00 00 00  .......3........
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 01 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0040 00 00 00 00 00 00 00 00                          ........
+	rel 32+8 t=1 runtime.gcbits.01+0
+	rel 40+4 t=5 type..namedata.*func(*main.Track) main.Track-+0
+	rel 44+4 t=-32763 type.*func(*main.Track) main.Track+0
+	rel 56+8 t=1 type.*main.Track+0
+	rel 64+8 t=1 type.main.Track+0
+type..namedata.*func(*main.Track, int) main.Track- SRODATA dupok size=36
+	0x0000 00 22 2a 66 75 6e 63 28 2a 6d 61 69 6e 2e 54 72  ."*func(*main.Tr
+	0x0010 61 63 6b 2c 20 69 6e 74 29 20 6d 61 69 6e 2e 54  ack, int) main.T
+	0x0020 72 61 63 6b                                      rack
+type.*func(*main.Track, int) main.Track SRODATA dupok size=56
+	0x0000 08 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00  ................
+	0x0010 ad 48 4f cf 08 08 08 36 00 00 00 00 00 00 00 00  .HO....6........
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00                          ........
+	rel 24+8 t=1 runtime.memequal64·f+0
+	rel 32+8 t=1 runtime.gcbits.01+0
+	rel 40+4 t=5 type..namedata.*func(*main.Track, int) main.Track-+0
+	rel 48+8 t=1 type.func(*main.Track, int) main.Track+0
+type.func(*main.Track, int) main.Track SRODATA dupok size=80
+	0x0000 08 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00  ................
+	0x0010 ca 5b 62 51 02 08 08 33 00 00 00 00 00 00 00 00  .[bQ...3........
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 02 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0040 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	rel 32+8 t=1 runtime.gcbits.01+0
+	rel 40+4 t=5 type..namedata.*func(*main.Track, int) main.Track-+0
+	rel 44+4 t=-32763 type.*func(*main.Track, int) main.Track+0
+	rel 56+8 t=1 type.*main.Track+0
+	rel 64+8 t=1 type.int+0
+	rel 72+8 t=1 type.main.Track+0
 type..importpath.main. SRODATA dupok size=6
 	0x0000 00 04 6d 61 69 6e                                ..main
+type..namedata.clearPrice- SRODATA dupok size=12
+	0x0000 00 0a 63 6c 65 61 72 50 72 69 63 65              ..clearPrice
+type..namedata.*func() main.Track- SRODATA dupok size=20
+	0x0000 00 12 2a 66 75 6e 63 28 29 20 6d 61 69 6e 2e 54  ..*func() main.T
+	0x0010 72 61 63 6b                                      rack
+type.*func() main.Track SRODATA dupok size=56
+	0x0000 08 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00  ................
+	0x0010 47 93 01 08 08 08 08 36 00 00 00 00 00 00 00 00  G......6........
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00                          ........
+	rel 24+8 t=1 runtime.memequal64·f+0
+	rel 32+8 t=1 runtime.gcbits.01+0
+	rel 40+4 t=5 type..namedata.*func() main.Track-+0
+	rel 48+8 t=1 type.func() main.Track+0
+type.func() main.Track SRODATA dupok size=64
+	0x0000 08 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00  ................
+	0x0010 1b de 53 69 02 08 08 33 00 00 00 00 00 00 00 00  ..Si...3........
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	rel 32+8 t=1 runtime.gcbits.01+0
+	rel 40+4 t=5 type..namedata.*func() main.Track-+0
+	rel 44+4 t=-32763 type.*func() main.Track+0
+	rel 56+8 t=1 type.main.Track+0
+type..namedata.setPrice- SRODATA dupok size=10
+	0x0000 00 08 73 65 74 50 72 69 63 65                    ..setPrice
+type..namedata.*func(int) main.Track- SRODATA dupok size=23
+	0x0000 00 15 2a 66 75 6e 63 28 69 6e 74 29 20 6d 61 69  ..*func(int) mai
+	0x0010 6e 2e 54 72 61 63 6b                             n.Track
+type.*func(int) main.Track SRODATA dupok size=56
+	0x0000 08 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00  ................
+	0x0010 c0 11 f9 ca 08 08 08 36 00 00 00 00 00 00 00 00  .......6........
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00                          ........
+	rel 24+8 t=1 runtime.memequal64·f+0
+	rel 32+8 t=1 runtime.gcbits.01+0
+	rel 40+4 t=5 type..namedata.*func(int) main.Track-+0
+	rel 48+8 t=1 type.func(int) main.Track+0
+type.func(int) main.Track SRODATA dupok size=72
+	0x0000 08 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00  ................
+	0x0010 6a d3 6d e7 02 08 08 33 00 00 00 00 00 00 00 00  j.m....3........
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 01 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0040 00 00 00 00 00 00 00 00                          ........
+	rel 32+8 t=1 runtime.gcbits.01+0
+	rel 40+4 t=5 type..namedata.*func(int) main.Track-+0
+	rel 44+4 t=-32763 type.*func(int) main.Track+0
+	rel 56+8 t=1 type.int+0
+	rel 64+8 t=1 type.main.Track+0
+type.*main.Track SRODATA size=104
+	0x0000 08 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00  ................
+	0x0010 14 4a 6c 84 09 08 08 36 00 00 00 00 00 00 00 00  .Jl....6........
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00  ................
+	0x0040 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0050 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0060 00 00 00 00 00 00 00 00                          ........
+	rel 24+8 t=1 runtime.memequal64·f+0
+	rel 32+8 t=1 runtime.gcbits.01+0
+	rel 40+4 t=5 type..namedata.*main.Track.+0
+	rel 48+8 t=1 type.main.Track+0
+	rel 56+4 t=5 type..importpath.main.+0
+	rel 72+4 t=5 type..namedata.clearPrice-+0
+	rel 76+4 t=26 type.func() main.Track+0
+	rel 80+4 t=26 main.(*Track).clearPrice+0
+	rel 84+4 t=26 main.(*Track).clearPrice+0
+	rel 88+4 t=5 type..namedata.setPrice-+0
+	rel 92+4 t=26 type.func(int) main.Track+0
+	rel 96+4 t=26 main.(*Track).setPrice+0
+	rel 100+4 t=26 main.(*Track).setPrice+0
+runtime.gcbits.55 SRODATA dupok size=1
+	0x0000 55                                               U
 type..namedata.name- SRODATA dupok size=6
 	0x0000 00 04 6e 61 6d 65                                ..name
 type..namedata.artist- SRODATA dupok size=8
@@ -822,6 +1017,16 @@ main.updatePriceByValue.arginfo1 SRODATA static dupok size=31
 	0x0010 28 08 fd fe 30 08 38 08 fd 40 08 fd 48 08 ff     (...0.8..@..H..
 main.updatePriceByValue.argliveinfo SRODATA static dupok size=2
 	0x0000 48 00                                            H.
+gclocals·SoG6d3SEFU105ym5LEtOUA== SRODATA dupok size=12
+	0x0000 02 00 00 00 09 00 00 00 00 00 00 00              ............
+main.(*Track).clearPrice.arginfo1 SRODATA static dupok size=3
+	0x0000 00 08 ff                                         ...
+main.(*Track).clearPrice.argliveinfo SRODATA static dupok size=2
+	0x0000 00 00                                            ..
+main.(*Track).setPrice.arginfo1 SRODATA static dupok size=5
+	0x0000 00 08 08 08 ff                                   .....
+main.(*Track).setPrice.argliveinfo SRODATA static dupok size=2
+	0x0000 00 00                                            ..
 gclocals·TjPuuCwdlCpTaRQGRKTrYw== SRODATA dupok size=10
 	0x0000 02 00 00 00 02 00 00 00 03 00                    ..........
 type..eq.main.Track.arginfo1 SRODATA static dupok size=5
