@@ -1,11 +1,15 @@
 package main
 
 import (
-	"fmt"
-	"github.com/lebrancconvas/Learn-Go-by-Youtube/lab_package/book"
+	"github.com/LebrancWorkshop/Learn-Go-from-Youtube/lab_package/book"
 )
 
 func main() {
-	var book Book;
-	fmt.Println("Hello");
+	book := book.Book{
+		name: "The Adventures of Cantonese Boy",
+		author: "Lee Tek Chiew",
+		category: "Novel",
+		price: 100}
+	
+	book.Display();
 }
