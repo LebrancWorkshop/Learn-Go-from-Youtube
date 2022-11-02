@@ -5,10 +5,10 @@ import (
 )
 
 type Book struct {
-	name string;
-	author string;
-	category string;
-	price int;
+	Name string;
+	Author string;
+	Category string;
+	Price int;
 }
 
 func (b Book) Display() {

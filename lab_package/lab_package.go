@@ -6,10 +6,10 @@ import (
 
 func main() {
 	book := book.Book{
-		name: "The Adventures of Cantonese Boy",
-		author: "Lee Tek Chiew",
-		category: "Novel",
-		price: 100}
+		Name: "The Adventures of Cantonese Boy",
+		Author: "Lee Tek Chiew",
+		Category: "Novel",
+		Price: 100}
 	
 	book.Display();
 }
