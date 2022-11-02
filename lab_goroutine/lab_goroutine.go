@@ -2,27 +2,25 @@ package main
 
 import (
 	"fmt"
+	"time"
 )
 
-func main() {
-	numSet01 := []int{1, 2, 3, 4, 5};
-	numSet02 := []int{6, 7, 8, 9, 10};
-
-	ch := make(chan int);
-
-	go printArray(numSet01, numSet02, ch);
-	
-	<- ch;
+func getRecipe() {
+	fmt.Println("Get Egg");
+	fmt.Println("Get Fish Sauce");
+	fmt.Println("Get Oil");
+	fmt.Println("Get Dish");
 }
 
-func printArray(array01 []int, array02 []int, ch chan int) {
-	 for _, num1 := range array01 {
-		fmt.Println(num1);
-		ch <- num1;
-	 }
+func cookOmelete() {
+	fmt.Println("Break Egg on Cup and Mix.");
+	fmt.Println("Put Fish Sauce in the cup of egg and mix.");
+	fmt.Println("Put Oil in the pan and heat then cook.");
+	fmt.Println("Put omelete in your dish");
+}
 
-	 for _, num2 := range array02 {
-		fmt.Println(num2);
-		ch <- num2;
-	 }
+func main() {
+	go getRecipe();
+	go cookOmelete();
+	time.Sleep(time.Second * 20);
 }
