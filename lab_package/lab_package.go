@@ -9,7 +9,8 @@ func main() {
 		Name: "The Adventures of Cantonese Boy",
 		Author: "Lee Tek Chiew",
 		Category: "Novel",
-		Price: 100}
+		Price: 100,
+	}
 	
 	book.Display();
 }
