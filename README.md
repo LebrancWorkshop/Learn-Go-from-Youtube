@@ -14,6 +14,18 @@ Learning Go from many great resources that you can find and learn for free on Yo
 
 - [[EN] Playlist: Golang Tutorials (Tech with Tim)](https://www.youtube.com/playlist?list=PLzMcBGfZo4-mtY_SE3HuzQJzuj4VlUG0q)
 
+- [[EN] Playlist: Golang Basics (Golang Dojo)](https://www.youtube.com/playlist?list=PLve39GJ2D71xX0Ham0WoPaYfl8oTzZfN6)
+
+- [[EN] Playlist: Golang Concurrency Basics (Golang Dojo)](https://www.youtube.com/playlist?list=PLve39GJ2D71wSwRQLp_h8B60pKgS85StC)
+
+- [[EN] Playlist: Golang Explained (Golang Dojo)](https://www.youtube.com/playlist?list=PLve39GJ2D71wKL33k5eZ6Frot74mhiCxz)
+
+- [[EN] Playlist: Golang Web App (Golang Dojo)](https://www.youtube.com/playlist?list=PLve39GJ2D71yyECswi0lVaBm_gbnDRR9v)
+
+- [[EN] Playlist: GoLang Tutorials (NerdCademy)](https://www.youtube.com/playlist?list=PLujhHB_uAFJws6Vv5q1KDoaQ4YcpS9UOm)
+
+- [[EN] Playlist: Awesome Go (NerdCademy)](https://www.youtube.com/playlist?list=PLujhHB_uAFJyCIwTFd5Cj5bgncCUQ_MA4)
+
 - [[TH] Video: เริ่มต้นภาษา GOLANG ใน 9 นาที (ฉบับเร่งรัดสุดๆ) (BorntoDev)](https://www.youtube.com/watch?v=2CzmtwDKm5Q)
 
 - [[TH] Playlist: Golang (Ruangyot Nanchiang)](https://www.youtube.com/playlist?list=PLUg0hJGmtzyq2dm5k3LgoOJ7yrQh_eWVt)
