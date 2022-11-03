@@ -40,6 +40,10 @@ func (s *Stack) Pop() int {
 }
 
 func (s *Stack) Peek() int {
+	if s.isEmpty() {
+		fmt.Println("Stack is Empty. This has no peek.");
+		return -1;
+	}
 	return s.data[s.top];
 }
 
@@ -58,5 +62,9 @@ func (s *Stack) isFull() bool {
 }
 
 func (s *Stack) Display() {
-	fmt.Println(s);
+	var newData []int;
+	for i := 0; i < len(s.data); i++ {
+		newData = append(newData, s.data[i]);
+	}
+	fmt.Println(newData);
 }
