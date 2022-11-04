@@ -3,7 +3,12 @@
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"github.com/LebrancWorkshop/Learn-Go-from-Youtube/lab_scope/number"
+)
+
+var globalInt int = 99999;
 
 func main() {
 	// Block is some code that're inside a pair of curly braces. { <code_block> }
@@ -21,4 +26,12 @@ func main() {
 	fmt.Println(num1);
 
 	// fmt.Println(num2); // Error: undefined: num2
+	fmt.Println(globalInt);
+	fmt.Println(number.NumberFromAnotherFile);
+
+	notMain();
+}
+
+func notMain() {
+	fmt.Println(globalInt);
 }
