@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
-	f := food.Init("Egg Fried Rice", 80, []string{"Egg", "Rice", "Oil"});
-	fmt.Println(f);
+	food.PrintTest();
+	foody := food.New("Apple", 10); // Weird Error, I'll check it later. 
+	fmt.Println(foody);
 }
