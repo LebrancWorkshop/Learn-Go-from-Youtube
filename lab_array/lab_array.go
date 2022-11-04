@@ -19,4 +19,13 @@ func main() {
 	fmt.Println(arrayType);
 	fmt.Println(arrayNoType);
 	fmt.Println(arrayNoAssign);
+
+	array01 := [...]int{1,2};
+	array02 := []int{1,2};
+	array03 := []int{1: 1, 3: 10};
+	array05 := [5]int{1: 1, 3: 10};
+	fmt.Println(array01); // Output: [1 2]
+	fmt.Println(array02); // Output: [1 2]
+	fmt.Println(array03); // Output: [0 1 0 10]
+	fmt.Println(array05); // Output: [0 1 0 10 0]
 }
