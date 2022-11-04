@@ -34,7 +34,7 @@ Learning Go from many great resources that you can find and learn for free on Yo
 
 ## Tips & Tricks
 
-- [[TH] Blog: Code Snippet in Go (VSCode)](https://www.borntodev.com/2022/01/07/code-snippet-%E0%B8%AA%E0%B8%B3%E0%B8%AB%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2-go/)
+- [[TH] Blog: Code Snippet in Go on VSCode (BorntoDev)](https://www.borntodev.com/2022/01/07/code-snippet-%E0%B8%AA%E0%B8%B3%E0%B8%AB%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2-go/)
 
 ## How to run
 
