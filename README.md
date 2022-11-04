@@ -32,6 +32,10 @@ Learning Go from many great resources that you can find and learn for free on Yo
 
 - [[TH] Playlist: สอน Golang Part1# (CMDev)](https://www.youtube.com/playlist?list=PLjPfp4Ph3gBrJ6jHPow7pZlOgMmfyQ7zK)
 
+## Tips & Tricks
+
+- [[TH] Blog: Code Snippet in Go (VSCode)](https://www.borntodev.com/2022/01/07/code-snippet-%E0%B8%AA%E0%B8%B3%E0%B8%AB%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2-go/)
+
 ## How to run
 
 It's very easy for you to run the code on this repository, I've already written a [shell script (main.sh)](https://github.com/LebrancWorkshop/Learn-Go-from-Youtube/blob/main/main.sh) for you to run  
