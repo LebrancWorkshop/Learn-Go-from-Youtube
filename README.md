@@ -6,6 +6,8 @@ Learning Go from many great resources that you can find and learn for free on Yo
 
 ## Resources
 
+### English Language
+
 - [[EN] Video: Learn Go Programming - Golang Tutorial to Beginners (freeCodeCamp)](https://www.youtube.com/watch?v=YS4e4q9oBaU)
 
 - [[EN] Video: Golang Tutorial for Beginners | Full Go Course (TechWorld with Nana)](https://www.youtube.com/watch?v=yyUHQIec83I)
@@ -26,6 +28,8 @@ Learning Go from many great resources that you can find and learn for free on Yo
 
 - [[EN] Playlist: Awesome Go (NerdCademy)](https://www.youtube.com/playlist?list=PLujhHB_uAFJyCIwTFd5Cj5bgncCUQ_MA4)
 
+### Thai Language
+
 - [[TH] Video: เริ่มต้นภาษา GOLANG ใน 9 นาที (ฉบับเร่งรัดสุดๆ) (BorntoDev)](https://www.youtube.com/watch?v=2CzmtwDKm5Q)
 
 - [[TH] Playlist: Golang (Ruangyot Nanchiang)](https://www.youtube.com/playlist?list=PLUg0hJGmtzyq2dm5k3LgoOJ7yrQh_eWVt)
@@ -33,6 +37,8 @@ Learning Go from many great resources that you can find and learn for free on Yo
 - [[TH] Playlist: สอน Golang Part1# (CMDev)](https://www.youtube.com/playlist?list=PLjPfp4Ph3gBrJ6jHPow7pZlOgMmfyQ7zK)
 
 ## Tips & Tricks
+
+### Thai Language
 
 - [[TH] Blog: Code Snippet in Go on VSCode (BorntoDev)](https://www.borntodev.com/2022/01/07/code-snippet-%E0%B8%AA%E0%B8%B3%E0%B8%AB%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2-go/)
 
